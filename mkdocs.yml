@@ -46,3 +46,8 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.superfences
   - pymdownx.tabbed
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/mrolli/
