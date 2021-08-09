@@ -1,0 +1,47 @@
+site_name: "My IT Journal"
+repo_url:  "https://github.com/mrolli/myitjournal.git"
+repo_name: "mrolli/itjournal"
+copyright: "Copyright &copy; 2021 Michael Rolli<br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>."
+
+nav:
+  - "Home": index.md
+  - "Courses":
+      - "Tools": courses/tools.md
+      - "My IT Journal": courses/myitjournal.md
+  - "Guides":
+      - "Homebrew": guides/homebrew.md
+      - "Miniconda": guides/miniconda.md
+      - "MkDocs": guides/mkdocs.md
+      - "Vim": guides/vim.md
+  - About Me: about.md
+
+theme:
+  name: material
+  icon:
+    logo: fontawesome/solid/chalkboard-teacher
+    repo: fontawesome/brands/github
+  language: de
+  palette:
+    - scheme: default
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: amber
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed

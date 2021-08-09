@@ -1,0 +1,5 @@
+site/
+.vagrant/
+tmp/
+temp/
+.DS_Store
