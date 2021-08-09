@@ -20,7 +20,7 @@ theme:
   icon:
     logo: fontawesome/solid/chalkboard-teacher
     repo: fontawesome/brands/github
-  language: de
+  language: en
   palette:
     - scheme: default
       primary: orange

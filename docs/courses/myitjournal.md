@@ -40,13 +40,39 @@ but the package "Material for MkDocs".
 Material for MkDocs is a theme for MkDocs, which itself is a static site generator geared towards
 (technical) project documentation. This is the tool used to create our [HPC used guide](https://hpc-unibe-ch.github.com/).
 
-Documention for the tools can be found on their websites at [https://www.mkdocs.org/](https://www.mkdocs.org/) and
+Documentation for the tools can be found on their websites at [https://www.mkdocs.org/](https://www.mkdocs.org/) and
 [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/).
 
 Having conda in place now lets us create a conda environment for these tools.
 
 !!! abstract "Task: Install Material for MkDocs"
-    * Create a conda environment called "myitjournal" and ***activate it***
+    * Create a conda environment called "itjournal" and ***activate it***
     * Install latest Python 3.9 (this also installs pip - the package manager)
     * Then install Material for MkDcos using pip
+    * Do you see the help message, when you run `mkdocs --help`?
+
+Now that the mkdocs tool and the respective Material theme is installed, we can start our documentation.
+
+!!! abstract "Task: Create and initialize your journal"
+    * Create a new directory, name as you like/see fit
+    * Enter the directory and make it a git repository
+    * Create a new github repo over at [github.com](https://github.com)
+    * Add the remote repo as the origin of your local git repo
+    * Then create an initial mkdocs project, see getting started guide of mkdocs-material
+    * Add and commit these files as the starting point of your journey
+
+!!! tip ""
+    The documentation of [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) itself
+    is a valuable source for inspiration. Also this "demo/learning journal" may inspire you. Think
+    espcially about the structure of your docomentation, where you want to publish the Tages- and
+    Wochenberichte and probably some words about you.
+
+MkDocs features a built in server to locally render and see, what the markdown you are writing
+actually will look like, see chapter "Preview as you write". Make use of it and open
+`https://localhost:8000` in you browser. It magically reloads upon changing anyhting in your
+documentation, doesn't it?
+
+!!! warning ""
+    Don't forget to do regular commits, i.e. after changing a layout element or for each Tages- or
+    Wochenbericht.
 
