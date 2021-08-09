@@ -76,3 +76,16 @@ documentation, doesn't it?
     Don't forget to do regular commits, i.e. after changing a layout element or for each Tages- or
     Wochenbericht.
 
+As soon as you work is done and you have something new to share with the world, it's time to 
+publish a new (or a first) version of your documentation. To achieve this, `mkdocs` will build
+the static pages and to publish the result. When managing the repo on github.com and publishing
+as gihtub pages at github.io, things are very easy to acomplish. github.com will automatically 
+see the generate `gh-pages` branch that mkdocs generates. Things "automagically" just work as
+expected. Nevertheless...
+
+!!! acstract "Task: Publish and verify"
+    * View the "What is GitHub Pages" Video at [https://www.youtube.com/watch?v=2MsN8gpT6jY](https://www.youtube.com/watch?v=2MsN8gpT6jY)
+    * Use mkdocs to publish as github pages, see "with MkDocs" on [Publishing your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions)
+
+Later we will improve the project to automatically build the static pages on every push to the main
+branch, but for now, we do it manually to get used to it.
