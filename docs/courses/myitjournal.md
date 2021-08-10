@@ -46,7 +46,7 @@ Documentation for the tools can be found on their websites at [https://www.mkdoc
 Having conda in place now lets us create a conda environment for these tools.
 
 !!! abstract "Task: Install Material for MkDocs"
-    * Create a conda environment called "itjournal" and ***activate it***
+    * Create a conda environment called "itjournal" and **activate it**
     * Install latest Python 3.9 (this also installs pip - the package manager)
     * Then install Material for MkDcos using pip
     * Do you see the help message, when you run `mkdocs --help`?

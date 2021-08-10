@@ -2,9 +2,9 @@
 
 ## Installation
 
-There are many possible ways to install the tool and its dependencies, see
-the [project's documentaiton](https://squidfunk.github.io/mkdocs-material/getting-started/).
-The description below illustrates the conda environemnt way to go.
+There are many possible ways to install the tool and its dependencies, see the
+[getting started][1] guide of material-mkdocs. The description below illustrates
+the conda environemnt way to go.
 
 === "Conda environment using pip"
 
@@ -29,16 +29,29 @@ Now its time to fire up a new projecct using `mkdocs:
     # It's probably wise to version it
     git init
     echo "site/" > .gitignore
-    # do more git stuff here or later
-    # now initialize a mkdocs project
+    # Do more git stuff here or later
+    #
+    # Now initialize a mkdocs project
     # and add the files to the git index
     mkdocs new .
     git add .
     git ci -m "Initial empty mkdocs project"
 
 
-The journey just started, best to continue the [Getting Started](https://squidfunk.github.io/mkdocs-material/creating-your-site/) guide on the material-mkdocs website.
+The journey just started, best to continue the [getting started guide][1] of the
+material-mkdocs website.
+
+The [reference guide][2] of material-mkdocs is a superb place to get an overview
+of possible style elements like admonitions, lists, formatting etc. and how to
+achieve them. Also look into the [cheatsheet][3] with all stuff in aciton.
+
+To publish the generated static pages, either deploy manually or setup a github action. This is
+on page [Publish your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/).
 
 ## Further Reading
 
 TBD
+
+[1]: https://squidfunk.github.io/mkdocs-material/getting-started/
+[2]: https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
+[3]: /mdcheat/
