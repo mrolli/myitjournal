@@ -56,6 +56,9 @@ The help command shows us the most used commands:
       man brew
       https://docs.brew.sh
 
+!!! tip "man brew"
+    The manpage of the Homebrew is really a good read especially for terminology and details, see `man brew`!
+
 ### Updating Homebrew
 
 !!! warning
@@ -66,11 +69,33 @@ and the local working copy of the repository that holds the formulae (a `git pul
 After that comman your Homebrew knows the latest version of all formulae and can tell you those that
 are newer as what you have installed. The installed software itself is ***not*** updated.
 
+### Installing software
+
+The command `brew install` will install a software aka formula and all of its dependencies, i.e `brew install wget`.
+
+### **`brew bundle`**
+
+Manually installing software may be useful on a one by one basis. But imagine installing all your software
+after reinstalling your operating system? Do you even remember what you had/need? Would it be easier to have
+a list of stuff you need, that is even versioned? Reinstalling the machine? Easy, reinstall, clone your repo
+and run `brew bundle --file Brewfile`. `Brewfile` is an arbitrary text file with content that my look like this:
+
+```
+tap "homebrew/cask"
+brew "findutils"
+brew "wget"
+cask "firefox"
+```
+
+This file can be created from what you currently have using `brew bundle dump --file Brewfile`.
+
+See [homebrew-bundle] or `man brew` for more details.
+
 ### Upgrading installed software
 
 Homebrew formulae get frequently updated as their maintainers take care of "their formulae". This
 means whenever a certain software is updated, so is the forumlae. Upgrading the wget package we just
-installed is done by running the command `brew upgrade wget`.` To upgrade all software that we have
+installed is done by running the command `brew upgrade wget`. To upgrade all software that we have
 so far, just run `brew upgrade`. Curious beforehand what would be updated? Just run `brew outdated` to
 see the list of available upgrades.
 
@@ -131,3 +156,7 @@ fi;
 echo "[ ${blue}..${reset} ] Running brew doctor";
 brew doctor
 ```
+
+[homebrew-bundle]: https://github.com/Homebrew/homebrew-bundle
+[homebrew-cask]: https://github.com/Homebrew/homebrew-cask
+[homebrew-services]: https://github.com/Homebrew/homebrew-services
