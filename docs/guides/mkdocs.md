@@ -54,4 +54,4 @@ TBD
 
 [1]: https://squidfunk.github.io/mkdocs-material/getting-started/
 [2]: https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
-[3]: /mdcheat/
+[3]: ../../mdcheat/
