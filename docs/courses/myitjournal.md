@@ -67,8 +67,8 @@ Now that the mkdocs tool and the respective Material theme is installed, we can 
     espcially about the structure of your docomentation, where you want to publish the Tages- and
     Wochenberichte and probably some words about you.
 
-MkDocs features a built in server to locally render and see, what the markdown you are writing
-actually will look like, see chapter "Preview as you write". Make use of it and open
+MkDocs has a built-in server to locally render and see, what the markdown you are writing
+actually will look like, see chapter [Preview as you write][4]. Make use of it and open
 `https://localhost:8000` in you browser. It magically reloads upon changing anyhting in your
 documentation, doesn't it?
 
@@ -89,3 +89,5 @@ expected. Nevertheless...
 
 Later we will improve the project to automatically build the static pages on every push to the main
 branch, but for now, we do it manually to get used to it.
+
+[4]: https://squidfunk.github.io/mkdocs-material/creating-your-site/#previewing-as-you-write
