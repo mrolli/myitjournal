@@ -10,10 +10,13 @@ nav:
       - "Tools": courses/tools.md
       - "My IT Journal": courses/myitjournal.md
   - "Guides":
+      - "Git": guides/git.md
+      - "Github": guides/github.md
       - "Homebrew": guides/homebrew.md
       - "Miniconda": guides/miniconda.md
       - "MkDocs": guides/mkdocs.md
       - "Vim": guides/vim.md
+  - "MdCheatsheet": mdcheat.md
   - About Me: about.md
 
 theme:
