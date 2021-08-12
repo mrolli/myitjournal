@@ -1,6 +1,6 @@
 site_name: "My IT Journal"
-repo_url:  "https://github.com/mrolli/myitjournal"
-edit_uri:  ""
+repo_url: "https://github.com/mrolli/myitjournal"
+edit_uri: ""
 repo_name: "mrolli/itjournal"
 copyright: "Copyright &copy; 2021 Michael Rolli<br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>."
 
@@ -23,13 +23,15 @@ theme:
     repo: fontawesome/brands/github
   language: en
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: orange
       accent: orange
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: amber
       accent: amber
       toggle:
