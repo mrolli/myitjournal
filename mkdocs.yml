@@ -41,7 +41,10 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
+    - navigation.expand
+    - navigation.sections
     - navigation.tabs
+    - navigation.top
 
 markdown_extensions:
   - admonition
