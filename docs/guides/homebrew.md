@@ -73,6 +73,21 @@ are newer as what you have installed. The installed software itself is ***not***
 
 The command `brew install` will install a software aka formula and all of its dependencies, i.e `brew install wget`.
 
+There are so called taps, which stands for repositories containg formulae that install software. By default the taps
+`homebrew-core` and `homebrew-cask` are already known and formulae can easily be installed using `brew install FORMULAE`. 
+
+* `homebrew-core` contains formulae for software that gets bottled (compiled) and distributed
+* `homebrew-cask` contains forumlae for software that is already compiled by the upstream vendor, i.e. google-chrome, firefox.
+
+One can create its own tap. As an example puppetlabs has its own tap to distribute puppet, pdk and the like, which means one
+can tap their tap and install the software using homebrew though it's not contained in default Homebrew:
+
+```
+brew tap puppetlabs/puppet
+brew install pdk
+```
+
+
 ### **`brew bundle`**
 
 Manually installing software may be useful on a one by one basis. But imagine installing all your software
@@ -81,15 +96,26 @@ a list of stuff you need, that is even versioned? Reinstalling the machine? Easy
 and run `brew bundle --file Brewfile`. `Brewfile` is an arbitrary text file with content that my look like this:
 
 ```
-tap "homebrew/cask"
+tap "pubppetlabs/puppet"
 brew "findutils"
 brew "wget"
 cask "firefox"
+mas 'Remote Desktop', id: 409907375
 ```
+
+The keywords denote how the packages get installed:
+
+line in Brewfile|Command run
+---|---
+tap "pubppetlabs/puppet"|brew tap puppetlabs/puppet
+brew "findutils"|brew install findutils
+cask "firefox"|brew install --cask firefox
+mas 'Remote Desktop', id: 409907375|mas install 409907375
 
 This file can be created from what you currently have using `brew bundle dump --file Brewfile`.
 
-See [homebrew-bundle] or `man brew` for more details.
+See [the `brew bundle` section of the `brew man` output](https://docs.brew.sh/Manpage#bundle-subcommand) or `brew bundle --help` or [homebrew-bundle] for more details.
+See [mas-cli] for the documentation of the mas cli tool.
 
 ### Upgrading installed software
 
@@ -160,3 +186,4 @@ brew doctor
 [homebrew-bundle]: https://github.com/Homebrew/homebrew-bundle
 [homebrew-cask]: https://github.com/Homebrew/homebrew-cask
 [homebrew-services]: https://github.com/Homebrew/homebrew-services
+[mas-cli]: https://github.com/mas-cli/mas
