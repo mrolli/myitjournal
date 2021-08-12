@@ -18,7 +18,7 @@ TBD
 I have committed something (to the main branch) and forgot to pull first. Now I can't push anymore as git
 rejects the push with the following message:
 
-!!! failure  ""
+!!! failure  "git push rejected"
     ![Screenshot](../img/git_push_reject.png)
 
 **Discussion and Solution**
@@ -30,5 +30,8 @@ conflicts with the other. What to do now? You would need to:
 * Run a `git pull --ff-only` to fetch the new commit from the other person
 * Re-apply your changes again on top of the latest commit
 
-The command `git pull --rebase` does exactly that. Details see `git help pull`. Now you may try to push your changes.
+!!! success "Solution"
+    `git pull --rebase`
+
+This command first fetches the latest commits and then rebases your commits on top of the latest commit, see `git help pull`. Now you may try to push your changes.
 
