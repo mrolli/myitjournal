@@ -30,4 +30,4 @@ Below follows the default index.md of a mkdocs installation as a quickref.
 - :fontawesome-regular-laugh-wink: – `.icons/fontawesome/regular/laugh-wink.svg`
 - :octicons-repo-push-24: – `.icons/octicons/repo-push-24.svg`
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+For full documentation visit [material-mkdocs](https://squidfunk.github.io/mkdocs-material/) and [mkdocs.org](https://www.mkdocs.org).
