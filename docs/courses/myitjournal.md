@@ -1,6 +1,6 @@
 # My IT Journal
 
-This is our first project. We want to generate a documentaiton where you can write
+This is our first project. We want to generate a documentation where you can write
 down your daily and weekly reports that you must write. Previously you have done this
 in the Confluence Wiki of Informatikdienste. Wouldn't it be nicer to have it somewhat
 more accessible and more modern? You can even buld a showcase of your skills with it!
