@@ -5,7 +5,7 @@ usage is to teach our learners. Courses are where students follow instructions. 
 themselves link to guides, which are setup by topic and serve as some sort of a refrence.
 
 !!! success "Have Fun!"
-    Now start with a course that interests your which you were told to work on.
+    Now start with a course that interests you or you were told to work on.
 
 Below follows the default index.md of a mkdocs installation as a quickref.
 
