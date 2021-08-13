@@ -9,7 +9,6 @@ nav:
   - "Courses":
       - "Tools": courses/tools.md
       - "My IT Journal": courses/myitjournal.md
-      - "Demo-WB KW32": wb_demo.md
   - "Guides":
       - "Git": guides/git.md
       - "Github": guides/github.md
@@ -17,7 +16,8 @@ nav:
       - "Miniconda": guides/miniconda.md
       - "MkDocs": guides/mkdocs.md
       - "Vim": guides/vim.md
-  - "MdCheatsheet": mdcheat.md
+  - "MdCheat": mdcheat.md
+  - "WB_KW32": wb_demo.md
   - About Me: about.md
 
 theme:
