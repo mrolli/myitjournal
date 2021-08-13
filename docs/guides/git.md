@@ -1,5 +1,9 @@
 # Git
 
+## Learning Git
+
+* [Visualizing Git](https://git-school.github.io/visualizing-git/)
+
 TBD
 
 * add some words about configuration and identities
@@ -8,6 +12,8 @@ TBD
 * add gitignore and gitattributes examples
 * introduce editorconfig
 * other "in repo files"?
+
+## .gitignore and .gitattributes
 
 ## Recipes
 
