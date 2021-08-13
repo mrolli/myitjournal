@@ -9,6 +9,7 @@ nav:
   - "Courses":
       - "Tools": courses/tools.md
       - "My IT Journal": courses/myitjournal.md
+      - "Demo-WB KW32": wb_demo.md
   - "Guides":
       - "Git": guides/git.md
       - "Github": guides/github.md
@@ -59,3 +60,6 @@ extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/mrolli/
+
+extra_css:
+  - stylesheets/extra.css
