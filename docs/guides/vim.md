@@ -28,10 +28,16 @@ Another Tutorial that is organized in levels:
 
 * [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 
+And espcially about Text Objects:
+
+* [Vim Text Objects: The Definitive Guide](https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/)
+
 And finally one from the Vim project leader Bram Moolenaar himself, though not for beginners but those
 that already know Vim for some time but want to get better:
 
 * [Seven habits of effective text editing](https://www.moolenaar.net/habits.html)
+
+There's even a browser game [**vim-adventures**](https://vim-adventures.com/) that teaches Vim.
 
 ## Learning Videos
 
