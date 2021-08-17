@@ -15,6 +15,19 @@ TBD
 
 ## .gitignore and .gitattributes
 
+## Articles
+
+#### **[The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git)**
+
+Often beginners find it oddly strange that there is an index/staging area in Git and are not aware
+for what this thing can be used. Other VCS to not have this. Nevertheless it's not an addition just
+to make Git more complicated and to bother the develepors. The "**Tangled Working Copy Problem**" illustrates
+why this conecpt makes sense and how you should use it to your favor. There's one important option tot `git add`
+that most beginners overlook (and tutorials almost never teach you), e.g. `--patch` or `-p`
+
+Try the following form of adding files to the index next you have to do that and see what happens!
+`git add --patch somepathspec` or `git add -p somepathspec`
+
 ## Recipes
 
 ### `git push` rejected due to remote changes"
