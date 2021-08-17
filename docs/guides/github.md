@@ -28,7 +28,7 @@ TODO: Write on "issue -> PR -> merge"
 * [A successful Git branching model AKA git-flow](https://medium.com/singlestone/a-git-workflow-using-rebase-1b1210de83e5)
 * [Git workflow using rebase](https://medium.com/singlestone/a-git-workflow-using-rebase-1b1210de83e5)
 
-Keep in mind to use a workflow that is simple as possible. Do not overly complicate collaboraiton if it's no needed. The git-flow
+Keep in mind to use a workflow that is as simple as possible. Do not overly complicate collaboraiton if it's no needed. The git-flow
 workflow is very powerful but comes with a certain complexity and therefore too much of a hassle for most projects we do. For
 these projects the [GitHub flow][gh-flow] is much more reasonable and by far easier to understand and live.
 

@@ -13,7 +13,16 @@ TBD
 * introduce editorconfig
 * other "in repo files"?
 
-## .gitignore and .gitattributes
+## Repository-local configuration files
+
+#### *gitignore* - Specifies intentionally untracked files to ignore
+
+A gitignore file specifies intentionally untracked files that Git should ignore, see [man gitignore](https://git-scm.com/docs/gitignore) or in the [git-book](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring).
+
+#### *gitattributes* - Defning attributes per path
+
+A gitattributes file is a simple text file that gives attributes to pathnames, i.e. end of line style, see
+[man gitattributes](https://git-scm.com/docs/gitattributes) or in the [git-book](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes).
 
 ## Articles
 
