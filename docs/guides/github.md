@@ -24,6 +24,7 @@ a printable PDF.
 TODO: Write on "issue -> PR -> merge"
 
 **List of popular workflows**
+
 * [GitHub flow][gh-flow]
 * [A successful Git branching model AKA git-flow](https://medium.com/singlestone/a-git-workflow-using-rebase-1b1210de83e5)
 * [Git workflow using rebase](https://medium.com/singlestone/a-git-workflow-using-rebase-1b1210de83e5)
