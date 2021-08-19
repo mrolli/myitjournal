@@ -21,7 +21,26 @@ of conflicts. Hosting the repo at GitHub however should motivate you to incorpor
 to be a very easy workflow that a whole lot of projects are using. Take a look into [guide on GitHub flow][gh-flow] with
 a printable PDF.
 
-TODO: Write on "issue -> PR -> merge"
+#### Example Workflow
+The philosophy of mine is that every change should be documented from the beginning to the end when it's implemented. A
+change could be a bug and its fix or a new feature that is required and gets implemented. The order of action then is:
+
+1. Open a ticket and describe the bug/feature in severeal dimensions to make it possible to understand the need to change something. Key questions are:
+    * What is broken?
+    * How does the error present itself?
+    * What are error messages that occur?
+    * What feature is missing?
+    * Which are the requirements that make the changes necessary?
+1. Checkout a new branch that addresses this issue and implement the changes on this branch? Name the branch accordingly,
+    i.e. `issue31`, `featureXY`, ...
+1. Make changes and commits to this feature branch
+1. (optional): Cleanup the branch by rewording, squashing, rearranging commits using  
+`git rebase --interactive`
+1. Push your changes to origin
+1. Prepare a pull request and optionally ask someoney else to review the changes
+1. Merge the feature branch back into the `main` branch
+1. Delete the feature branch locally and remote
+1. Get yourself a :fontawesome-solid-beer: or move to the next ticket
 
 **List of popular workflows**
 
