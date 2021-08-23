@@ -535,6 +535,35 @@ Footnotes[^1] have a label[^@#$%] and the footnote's content. Another Footnote[^
 [^@#$%]: A footnote on the label: "@#$%".
 [^anything]: Another content
 
+## Critic Markup
+
+There are five types of Critic marks:
+
+* Addition `{++addition++}`
+* Deletion `{--deletion --}`
+* Substitution `{~~this~>that~~}`
+* Comment `{>>I'm a comment <<}`
+* Highlight `{==This is hilghlighted==}{>> <<}`
+
+This a sample for a {~~exchange~>substitution~~}.
+
+When used in combination the marks can indicate more complex changes.
+
+	Don’t go around saying {--to people that --} the world owes you a living. The
+	world owes you nothing. It was here first. {~~One~>Only one~~} thing is
+	impossible for God: To find {++any++} sense in any copyright law on the
+	planet. {==Truth is stranger than fiction==}{>>true<<}, but it is because
+	Fiction is obliged to stick to possibilities; Truth isn’t.
+
+The above paragraphs should render to HTML in the following manner.
+
+	Don’t go around saying<del> to people that</del> the world owes you a
+	living. The world owes you nothing. It was here first.
+	<del>One</del><ins>Only one</ins> thing is impossible for God: To find
+	<ins>any</ins> sense in any copyright law on the planet. <mark>Truth is
+	stranger than fiction</mark><span class=”critic comment”>true</span>, but it
+	is because Fiction is obliged to stick to possibilities; Truth isn’t.
+
 ---
 
 License: [CC-BY](https://creativecommons.org/licenses/by/3.0/)

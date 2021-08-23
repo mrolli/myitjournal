@@ -51,6 +51,18 @@ There's even a browser game [**vim-adventures**](https://vim-adventures.com/) th
 
 ## Suggested Plugins
 
-### vim-surround
+### General Plugins
+
+#### vim-surround
 
 See the glorious tutoriol of Daniel Weibel at [weibeld.net](https://weibeld.net/vim/surround-plugin.html).
+
+### Markdown
+
+#### vim-criticmarkup
+
+If using ciritic markup, this plugin adds vim functions to approve or reject changes, though obviously not maintained anymore.
+
+## Futher Reading/Links
+
+[Using Markdown in Vim](https://vim.works/2019/03/16/using-markdown-in-vim/)
