@@ -41,11 +41,16 @@ There's even a browser game [**vim-adventures**](https://vim-adventures.com/) th
 
 ## Learning Videos
 
-### Mastering the Vim Language
+### The Vim Tutorial (beginner)
+
+[![Part One - Basic Commands](http://img.youtube.com/vi/ER5JYFKkYDg/0.jpg)](https://www.youtube.com/watch?v=ER5JYFKkYDg)
+[![Part Two - More Commands](http://img.youtube.com/vi/tExTz7GnpdQ/0.jpg)](https://www.youtube.com/watch?v=tExTz7GnpdQ)
+
+### Mastering the Vim Language (advanced)
 
 [![Mastering the Vim Language](http://img.youtube.com/vi/wlR5gYd6um0/0.jpg)](http://www.youtube.com/watch?v=wlR5gYd6um0/)
 
-### How to Do 90% of What Plugins Do (With Just Vim)
+### How to Do 90% of What Plugins Do (With Just Vim) (advanced)
 
 [![How to Do 90% of What Plugins Do (With Just Vim)](http://img.youtube.com/vi/XA2WjJbmmoM/0.jpg)](http://www.youtube.com/watch?v=XA2WjJbmmoM/)
 
