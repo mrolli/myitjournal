@@ -30,7 +30,7 @@ Another Tutorial that is organized in levels:
 
 And espcially about Text Objects:
 
-* [Vim Text Objects: The Definitive Guide](https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/)
+* [Vim Text Objects: The Definitive Guide][vim-text-objects]
 
 And finally one from the Vim project leader Bram Moolenaar himself, though not for beginners but those
 that already know Vim for some time but want to get better:
@@ -58,16 +58,23 @@ There's even a browser game [**vim-adventures**](https://vim-adventures.com/) th
 
 ### General Plugins
 
-#### vim-surround
+!!! tip "vim-surround"
+    The plugin [tpope/vim-surround](https://github.com/tpope/vim-surround) by [Tim Pope](https://github.com/tpope/)
+    feature text objects and commands regaring manipulation of surroundings.  
+    See the glorious tutoriol of [Daniel Weibel](https://weibeld.net/vim/surround-plugin.html).
 
-See the glorious tutoriol of Daniel Weibel at [weibeld.net](https://weibeld.net/vim/surround-plugin.html).
+!!! tip "vim-indent-object"
+    This plugin features new text objects for working on indendet blocks of any kind. Found at [vim-text-objects]. For usage
+    see the [docs](https://github.com/michaeljsmith/vim-indent-object)
+
 
 ### Markdown
 
-#### vim-criticmarkup
+There's a good write-up on [using markdown in Vim][vim-markdown]
 
-If using ciritic markup, this plugin adds vim functions to approve or reject changes, though obviously not maintained anymore.
+!!! tip "vim-criticmarkup"
+    If using ciritic markup, this plugin adds vim functions to approve or reject changes, though obviously not maintained anymore.  
+    Recommended by [vim-markdown].
 
-## Futher Reading/Links
-
-[Using Markdown in Vim](https://vim.works/2019/03/16/using-markdown-in-vim/)
+[vim-markdown]: https://vim.works/2019/03/16/using-markdown-in-vim/
+[vim-text-objects]: https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/
