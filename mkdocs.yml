@@ -47,6 +47,9 @@ theme:
     - navigation.tabs
     - navigation.top
 
+plugins:
+  - git-revision-date
+
 markdown_extensions:
   - admonition
   - pymdownx.betterem

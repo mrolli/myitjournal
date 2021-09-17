@@ -4,3 +4,4 @@ dependencies:
   - pip
   - pip:
       - mkdocs-material
+      - mkdocs-git-revision-date-plugin
