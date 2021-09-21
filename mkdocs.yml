@@ -1,7 +1,7 @@
 site_name: "My IT Journal"
 repo_url: "https://github.com/mrolli/myitjournal"
 edit_uri: "edit/main/docs"
-repo_name: "mrolli/itjournal"
+repo_name: "mrolli/myitjournal"
 copyright: "Copyright &copy; 2021 Michael Rolli<br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>."
 
 nav:
