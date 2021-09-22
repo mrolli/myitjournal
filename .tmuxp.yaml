@@ -1,0 +1,17 @@
+session_name: "myitjournal"
+global_options:
+  automatic-rename: 'off'
+windows:
+- window_name: myitjournal
+  layout: main-horizontal
+  start_directory: ~/Developer/id/myitjournal/docs
+  panes:
+  - shell_command:
+    - cd ../
+    - tmux resize-pane -t :.1 -y 8
+    - conda activate itjournal
+    - mkdocs serve
+  - focus: true
+    shell_command:
+    - sleep 1 && open http://localhost:8000 && clear
+  - pane
