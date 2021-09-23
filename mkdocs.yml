@@ -9,6 +9,7 @@ nav:
   - "Courses":
       - "Tools": courses/tools.md
       - "My IT Journal": courses/myitjournal.md
+      - "Webapp Stack": courses/webappstack.md
   - "Guides":
       - "Git": guides/git.md
       - "Github": guides/github.md
@@ -51,15 +52,20 @@ plugins:
   - git-revision-date
 
 markdown_extensions:
+  - abbr
   - admonition
+  - def_list
   - pymdownx.betterem
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra:
   social:
