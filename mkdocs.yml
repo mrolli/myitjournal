@@ -48,6 +48,7 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.top
+    - content.tabs.link
 
 plugins:
   - git-revision-date
