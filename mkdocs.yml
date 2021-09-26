@@ -16,6 +16,7 @@ nav:
       - "Homebrew": guides/homebrew.md
       - "Miniconda": guides/miniconda.md
       - "MkDocs": guides/mkdocs.md
+      - "Vagrant": guides/vagrant.md
       - "Vim": guides/vim.md
   - "MdCheat": mdcheat.md
   - "WB_KW32": wb_demo.md
