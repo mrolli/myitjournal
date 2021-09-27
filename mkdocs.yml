@@ -19,6 +19,7 @@ nav:
       - "tmux": guides/tmux.md
       - "Vagrant": guides/vagrant.md
       - "Vim": guides/vim.md
+      - "Miscellaneous": guides/misc.md
   - "MdCheat": mdcheat.md
   - "WB_KW32": wb_demo.md
   - About Me: about.md

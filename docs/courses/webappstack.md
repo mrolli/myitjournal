@@ -37,15 +37,40 @@ and keep in mind to create commits based on steps we successfully carry out.
 Consider that the two linux server have to communicate with each otherh. Realize this using the private
 networking feature by adding an additional netowrk interface to the server.
 
-At least the webserver has to be reachable from the webbrowser on your laptop. Therefore you have to forwarte ports 80 and 443
-to you laptop.
+At least the webserver has to be reachable from the webbrowser on your laptop. Therefore you have to **forward ports 80 and 443**
+of the guestOS to you laptop, good local ports on the host OS could be 8080 and 8443.  
+(Optionally) forward the port 3306 to the host OS, i.e. to 8306.
 
 ## Provision the Databse Server
 
+!!! abstract "Database server installation"
+    * **Install** the database server - either [MariaDB] or [MySQL] - using `dnf`
+    * **Configure** the database server using the ini files and
+        * set default charet to *utf8mb4*
+        * set default collation *utf8mb4_unicode_ci*
+    * **Secure** the server for production use - try to figure out, which steps to carry out!
+
+Is it working? Is it no longer possible to connect using user `root` with an empty password?
+
+[MariaDB]: https://mariadb.org/
+[MySQL]: https://dev.mysql.com/
+
 ## Provision the Webserver
 
-### Installing Apache
+### Install Apache
 
-### Installing PHP-8
+### Install PHP
 
-## Deploy the application
+!!! abstract "Installing PHP-8"
+    Next we want to be able to run web applciations written in PHP. The latest available major verison of PHP is version 8.
+
+    !!! warning "PHP-8 not available"
+        Rocky Linux 8 comes with PHP-7.2.24, which is too old for most modern PHP webapps.
+
+    So, in order to have a current PHP-8 version, you either compile your own PHP (discouraged and not the way to go here) or
+    use some other source of RPMs, e.g. a third-party yum repository. Search the net to find a reliable source for PHP-RPMs
+    for RHEL-7 and derivates like Rocky Linux (Hint: Ratatouille).
+
+    Place the following script to `/var/www/html/index.php` and surf to https://localhost:8080
+
+## Deploy an Application
