@@ -4,6 +4,7 @@ global_options:
 start_directory: ${PWD}
 windows:
 - window_name: myitjournal
+  focus: true
   layout: main-horizontal
   panes:
   - shell_command:
