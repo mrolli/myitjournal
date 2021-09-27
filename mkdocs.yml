@@ -10,6 +10,7 @@ nav:
       - "Tools": courses/tools.md
       - "My IT Journal": courses/myitjournal.md
       - "Webapp Stack": courses/webappstack.md
+      - "The World in SQL": courses/world_in_sql.md
   - "Guides":
       - "Git": guides/git.md
       - "Github": guides/github.md
