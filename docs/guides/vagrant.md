@@ -7,7 +7,7 @@ See the [Vagrant Documentation](https://www.vagrantup.com/docs) for a primer.
 
 The installation process is well outlined at the [Download Vagrant](https://www.vagrantup.com/downloads) page.
 
-Homebrew alos features a shell completion package vor the `vagrant` binary that is recommended.  
+Homebrew also features a shell completion package vor the `vagrant` binary that is recommended.  
 `brew install vagrant-completion`
 
 ## VM config examples
