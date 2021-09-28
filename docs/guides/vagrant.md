@@ -12,9 +12,9 @@ Homebrew also features a shell completion package vor the `vagrant` binary that 
 
 ## VM config examples
 
-## Tips & Tricks
+## Tips & Tricks / How to...
 
-### How to change names (VM name, hostname, ...)
+### Change names (VM name, hostname, ...)
 
 There are at least the following levels of naming a virtual server depending on the context:
 
@@ -25,7 +25,8 @@ There are at least the following levels of naming a virtual server depending on 
 * **Hostname**: The hostname that is set within the virtual machine AKA the running guest OS
 
 The question inherently arises: How are these set by default and how can I customize them?  
-Well the documentation is not that clear about all this but fear not, you're covered with the systematic examples below.
+Well the [documentation](https://www.vagrantup.com/docs/vagrantfile/machine_settings) is not that clear about all this but fear
+not, you're covered with systematic examples below.
 
 **All these examples are run in a project directory named "myproject"** using Vagrant-2.2.18 on VirtualBox-6.1.26r145957.
 
@@ -138,8 +139,30 @@ Well the documentation is not that clear about all this but fear not, you're cov
     In the above example, the final name of the VM will be `web01`.
 
 !!! success "Conclusion"
-    It makes sense to make use of these powerful possibilities of naming things. Especially it is useful to use them to namespace
+    It makes sense to use of these powerful possibilities of naming things. Especially it is useful to use them to namespace
     the virtual machines because when approaching the setup from the VM perspective you can map the VM instance to a project and
-    the servers there in.
+    the servers there in. Therefore if you set it to an absolute name using `VBoxManage`, I'd suggest to namespace it to the
+    project it belongs to, something like "myproject_webserver01" or something like that.
 
+### Change machine settings like RAM, network cards, ...
 
+These configuration options are provider-specific. For VirtualBox have a look on the respective [page in the documentation](https://www.vagrantup.com/docs/providers/virtualbox/configuration). Summarized with two examples, it's possible to set almost everything
+by calling `VBoxManage` from within the Vagrantfile. The vb.customize directive calls `VBoxManage` and the contents of the array
+specified as its argument are passed straight to it. See `VBoxManage --help` for all the possible targets - there a lot!
+
+!!! abstract "Example modifying apects of a virtualbox machine"
+    ```ruby
+    config.vm.provider "virtualbox" do |vb|
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      vb.customize ["modifyvm", :id, "--memory", "384"]
+      vb.customize ["modifyvm", :id, "--nic3", "intnet"]
+      vb.customize ["modifyvm", :id, "--nic4", "intnet"]
+    end
+
+    # There are some convenience shortcuts for memory and CPU settings:
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = 1024
+      vb.cpus = 2
+    end
+    ```
