@@ -55,7 +55,8 @@ of the guestOS to you laptop, good local ports on the host OS could be 8080 and 
     Regarding the charset question set every aspect to charset `utf8mb4` and collation `utf8mb4_unicode_ci`, see
     [my.cnf.d/charset.cnf]. For details of the configuration and the reasoning see [the guide on Charsets](../guides/misc.md).
 
-Is it working? Can you connect from the database server itself? Is it no longer possible to connect using user `root` with an empty password?  
+Is it working? Can you connect from the database server itself? Is it no longer possible to connect using user `root` with
+an empty password?  
 (Optional) Can you connect to the database server at the forwarded port from the host machine?
 
 ??? success "Solution - Connecting from macOS"
@@ -83,20 +84,30 @@ Is it working? Can you connect from the database server itself? Is it no longer 
 
 ## Provision the Webserver
 
-### Install Apache
-
-### Install PHP
-
 !!! abstract "Installing PHP-8"
-    Next we want to be able to run web applciations written in PHP. The latest available major verison of PHP is version 8.
+    Next we want to be able to run web applications written in PHP. The latest available major version of PHP is version 8.
 
     !!! warning "PHP-8 not available"
-        Rocky Linux 8 comes with PHP-7.2.24, which is too old for most modern PHP webapps.
+        Rocky Linux 8 comes with PHP version 7.2, 7.3 and 7.4, which might be too old for some PHP webapps. But PHP 8 is not
+        available in the repositories of the distribution (same goes for CentOS-8, RHEL-8).
 
     So, in order to have a current PHP-8 version, you either compile your own PHP (discouraged and not the way to go here) or
     use some other source of RPMs, e.g. a third-party yum repository. Search the net to find a reliable source for PHP-RPMs
-    for RHEL-7 and derivates like Rocky Linux (Hint: Ratatouille).
+    for RHEL-7 and derivates like Rocky Linux (Hint: Ratatouille). Even when you do not need PHP 8 yet, but your app requires
+    PHP 7.4, you will have to familiarize yourself with the concept of [modularity](https://docs.pagure.org/modularity/).
 
-    Place the following script to `/var/www/html/index.php` and surf to https://localhost:8080
+    ![PHP version infos](../img/phpinfo.png){ align=right }
+
+    Place the following script to `/var/www/html/index.php` and surf to <https://localhost:8080>.
+    ```php
+    <?php echo phpinfo();
+    ```
+
+    Is it working? You should see the follwoing webpage:
+
+??? success "Solution - Installing Apache and PHP"
+    Please find my approach to the above tasks in the script [provision_webserver].
+
+[provision_webserver]: https://github.com/mrolli/webappstack/blob/main/provision_webserver
 
 ## Deploy an Application
