@@ -44,16 +44,42 @@ of the guestOS to you laptop, good local ports on the host OS could be 8080 and 
 ## Provision the Databse Server
 
 !!! abstract "Database server installation"
-    * **Install** the database server - either [MariaDB] or [MySQL] - using `dnf`
-    * **Configure** the database server using the ini files and
+    1. **Install** the database server - either [MariaDB] or [MySQL] - using `dnf`
+    1. **Configure** the database server using the ini files and
         * set default charet to *utf8mb4*
         * set default collation *utf8mb4_unicode_ci*
-    * **Secure** the server for production use - try to figure out, which steps to carry out!
+    1. **Secure** the server for production use - try to figure out, which steps to carry out!
 
-Is it working? Is it no longer possible to connect using user `root` with an empty password?
+??? success "Solutions - Databse server installation"
+    Please find my approach to the above tasks in the script [provision_dbserver].  
+    Regarding the charset question set every aspect to charset `utf8mb4` and collation `utf8mb4_unicode_ci`, see
+    [my.cnf.d/charset.cnf]. For details of the configuration and the reasoning see [the guide on Charsets](../guides/misc.md).
+
+Is it working? Can you connect from the database server itself? Is it no longer possible to connect using user `root` with an empty password?  
+(Optional) Can you connect to the database server at the forwarded port from the host machine?
+
+??? success "Solution - Connecting from macOS"
+    First you need to install the mysql client binary. If you only want to connect to a remote DB server without having the
+    need for a local DB server on the host itself, you can safely just install the client package `mysql-client` - else install
+    `mariadb` that consists of the server and the client binaries.
+    ```bash
+    brew install mysql-client
+    # As it is keg only, either force linkng:
+    brew link mysql-client -f
+    # or add the bin path to your $PATH variable, i.e.:
+    echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH"' >> ~/.bash_profile
+    ```
+    Connecting still won't work. MariaDB/MySQL on macOS/Linux chooses to connect to a socket when connecting to `localhost` or when
+    no server is specified. To connect using the TCP/IP protocol, you have to use an IP address. Don't forget to use the
+    port that you actually used for port forwarding, in my case:
+    ```bash
+    mysql -h 127.0.0.1 --port 8306 -u demouser -p
+    ```
 
 [MariaDB]: https://mariadb.org/
 [MySQL]: https://dev.mysql.com/
+[provision_dbserver]: https://github.com/mrolli/webappstack/blob/main/provision_dbserver
+[my.cnf.d/charset.cnf]: https://github.com/mrolli/webappstack/blob/main/my.cnf.d/charset.cnf
 
 ## Provision the Webserver
 
