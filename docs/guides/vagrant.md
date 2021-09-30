@@ -166,3 +166,17 @@ specified as its argument are passed straight to it. See `VBoxManage --help` for
       vb.cpus = 2
     end
     ```
+
+### Setting a fixed port for SSH forwwards
+
+Normally the ssh from the guest is automatically forwarded to port 2222 on the host. When port the latter port is already in
+use for another running VM, the next free post >2222 is choesen. This makes the port dependent of the order you start the VMs.
+While most of the time this is not a problem, you sometimes still want a fixed set of IPs for a project. Add this to your
+`Vagrantfile` for each machine you like to fix the forwarded SSH port:
+
+```ruby
+  config.vm.network "forwarded_port", guest: 22, host: 12345, id: "ssh"
+```
+
+Source was [this ticket](https://realguess.net/2015/10/06/overriding-the-default-forwarded-ssh-port-in-vagrant/) and this
+[blog entry](https://realguess.net/2015/10/06/overriding-the-default-forwarded-ssh-port-in-vagrant/).
