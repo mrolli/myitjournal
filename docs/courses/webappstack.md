@@ -34,12 +34,11 @@ and keep in mind to create commits based on steps we successfully carry out.
       * Work with the rockylinux 8 basebox provided by bento (bento/rockylinux-8)
       * Configure 2 severs in this Vagrant file: webserver and dbserver
 
-Consider that the two linux server have to communicate with each otherh. Realize this using the private
-networking feature by adding an additional netowrk interface to the server.
+Consider that the two linux server have to communicate with each other and you want to connect to them from your browser and/or
+your CLI. Realize this using the private networking feature by adding an additional netowrk interface to the servers.
 
-At least the webserver has to be reachable from the webbrowser on your laptop. Therefore you have to **forward ports 80 and 443**
-of the guestOS to you laptop, good local ports on the host OS could be 8080 and 8443.  
-(Optionally) forward the port 3306 to the host OS, i.e. to 8306.
+(Optional) If you want that the machines are reachable from everywhere via your host machine, you have to **forward ports 80
+and 443** of the guestOS to you laptop, good local ports on the host OS could be 8080 and 8443.
 
 ## Provision the Databse Server
 
@@ -56,8 +55,7 @@ of the guestOS to you laptop, good local ports on the host OS could be 8080 and 
     [my.cnf.d/charset.cnf]. For details of the configuration and the reasoning see [the guide on Charsets](../guides/misc.md).
 
 Is it working? Can you connect from the database server itself? Is it no longer possible to connect using user `root` with
-an empty password?  
-(Optional) Can you connect to the database server at the forwarded port from the host machine?
+an empty password?
 
 ??? success "Solution - Connecting from macOS"
     First you need to install the mysql client binary. If you only want to connect to a remote DB server without having the
@@ -70,12 +68,20 @@ an empty password?
     # or add the bin path to your $PATH variable, i.e.:
     echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH"' >> ~/.bash_profile
     ```
-    Connecting still won't work. MariaDB/MySQL on macOS/Linux chooses to connect to a socket when connecting to `localhost` or when
-    no server is specified. To connect using the TCP/IP protocol, you have to use an IP address. Don't forget to use the
-    port that you actually used for port forwarding, in my case:
+    Now you can connecto to the VMs using the mysql client binary. Use the IP address that you assigned in your `Vagrantfile`, in
+    my case:
     ```bash
-    mysql -h 127.0.0.1 --port 8306 -u demouser -p
+    mysql -h 192.168.33.20 -u demouser -p
     ```
+
+    !!! warning "(Optional task) Can you connect to the database server at the forwarded port from the host machine?"
+        Connecting won't work if you want to connec to the forwarded port 3306 on your host machine. MariaDB/MySQL on macOS/Linux
+        chooses to connect to a socket when connecting to `localhost` or when no server is specified. To connect using the TCP/IP
+        protocol, you have to use an IP address. Don't forget to use the port that you actually used for port forwarding, in my
+        case:
+        ```bash
+        mysql -h 127.0.0.1 --port 8306 -u demouser -p
+        ```
 
 [MariaDB]: https://mariadb.org/
 [MySQL]: https://dev.mysql.com/
@@ -107,6 +113,9 @@ an empty password?
 
 ??? success "Solution - Installing Apache and PHP"
     Please find my approach to the above tasks in the script [provision_webserver].
+    Upon installation you should be able to load the page at the IP you defined in the Vagrantfile, in my case at
+    <http://192.168.33.10/>. If you also forwarded the HTTP/HTTPS ports, then you can also load the same page at
+    <http://localhost:8080>.
 
 [provision_webserver]: https://github.com/mrolli/webappstack/blob/main/provision_webserver
 
