@@ -27,7 +27,4 @@ in more that one place. This includes topics like...
     * MariaDB KB article on [Setting Character Sets and Collactions](https://mariadb.com/kb/en/library/setting-character-sets-and-collations/)
     * <https://medium.com/@adamhooper/in-mysql-never-use-utf8-use-utf8mb4-11761243e434>
     * <https://stackoverflow.com/questions/47566730/force-mariadb-clients-to-use-utf8mb4>
-
-
-
-
+    * [How to support full Unicode in MySQL databases|(https://mathiasbynens.be/notes/mysql-utf8mb4) by Mathias Bynens
