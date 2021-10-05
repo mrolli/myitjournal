@@ -120,3 +120,15 @@ an empty password?
 [provision_webserver]: https://github.com/mrolli/webappstack/blob/main/provision_webserver
 
 ## Deploy an Application
+
+For the last step, there's no receipt that works for every application. There are as many installation procedures as there are
+applications out there, but still they share some archetypes:
+
+* Place the files to the DocumentRoot (of a VirtualServer directive), import an database dump file
+* Unpack the projecct files to the DocumentRoot and run an installer on the CLI
+* Like above but run the installer by surfing to in the browser
+* Run a command at the CLi to initiate a project and answer some questions
+* and in between the example above every other possibility that one might imagine
+
+!!! tip "... in a nutshell"
+    Consult the manual and thoroughly follow it step by step.
