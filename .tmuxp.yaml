@@ -14,5 +14,5 @@ windows:
   - focus: true
     start_directory: ${PWD}/docs/
     shell_command:
-    - sleep 2 && open http://localhost:8000 && clear
+    - sleep 3 && open http://localhost:8000 && clear
   - start_directory: ${PWD}/docs/
