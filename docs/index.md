@@ -1,14 +1,14 @@
 # Home
 
-On these pages you will find instructions, excercises, cheatsheets, refrences, and tutorials.
-Originally the material was meant to teach our apprectices in house a starting point on their
+On these pages you will find instructions, exercises, cheat sheets, references, and tutorials.
+Originally the material was meant to teach our apprentices in house a starting point on their
 quest to obtain new skills and learn new stuff.
 
-Courses are more work instrustions for learners of new stuff to guide them to a goal. These
+Courses are more work instructions for learners of new stuff to guide them to a goal. These
 link over to the guides - call them memorandums on my journey on a lot of webpages where I
 gather snips and lines that are worth to be kept and remembered - that are organized by topic.
 
-Meanwhile this technical documentaiton might morph towards my personal omnium-gatherum while
+Meanwhile this technical documentation might morph towards my personal omnium-gatherum while
 still trying to be useful for our young learners. Therefore it is and will always be in a flux.
 
 !!! success "Have Fun!"
