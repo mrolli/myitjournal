@@ -32,6 +32,10 @@ And espcially about Text Objects:
 
 * [Vim Text Objects: The Definitive Guide][vim-text-objects]
 
+And Vimscript which also covers customizing Vim and not only plugin development:
+
+* [Learn Vimscript the Hard Way](https://learnvimscriptthehardway.stevelosh.com/)
+
 And finally one from the Vim project leader Bram Moolenaar himself, though not for beginners but those
 that already know Vim for some time but want to get better:
 
@@ -78,3 +82,7 @@ There's a good write-up on [using markdown in Vim][vim-markdown]
 
 [vim-markdown]: https://vim.works/2019/03/16/using-markdown-in-vim/
 [vim-text-objects]: https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/
+
+## Further Readings
+
+[Vim/Nvim useful tricks](https://medium.com/@voyeg3r/vim-nvim-useful-tricks-456efd767240): Lots of short tips on shortcuts
