@@ -52,6 +52,7 @@ theme:
     - navigation.tabs
     - navigation.top
     - content.tabs.link
+    - toc.integrate
 
 plugins:
   - git-revision-date
@@ -72,6 +73,8 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
+  - toc:
+      toc_depth: 3
 
 extra:
   social:
