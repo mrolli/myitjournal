@@ -2,18 +2,16 @@
 
 ## Learning Git
 
+* [Pro Git Book](https://git-scm.com/book/en/v2)
 * [Visualizing Git](https://git-school.github.io/visualizing-git/)
 
-TBD
+## Configuration files
 
-* add some words about configuration and identities
-* add PGP signing of commits
-* add some notes about EOL and general style here?
-* add gitignore and gitattributes examples
-* introduce editorconfig
-* other "in repo files"?
+There are a number of configuration files that git offers and that let user customize their git experiance in great depth. As usual
+greate powers comes with great responisbility. :wink: Not all configuration files and options are mentioned here, there
+[are many more](https://git-scm.com/docs/git-config).
 
-## Repository-local configuration files
+### Repo-local
 
 #### *gitignore* - Specifies intentionally untracked files to ignore
 
