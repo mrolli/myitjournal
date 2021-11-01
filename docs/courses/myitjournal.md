@@ -7,7 +7,7 @@ more accessible and more modern? You can even buld a showcase of your skills wit
 
 Now let us first define the requirements and the goals of our solution:
 
-* The documentation must be verioned, therefore we want to manage it in a Git repository.
+* The documentation must be versioned, therefore we want to manage it in a Git repository.
 * Being in a Git repository and published on github.com allows others to participate.
 * As a learner I don't want to wr
 
@@ -30,7 +30,7 @@ Knowing conda helps to manage different Python environments that do not influenc
         * Create environments with a specific version of Pythyon, i.e. 3.9.x, see [Managing Python](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python)
         * Install some packages with conda though we will use pip later when installing `mkdocs`, see [Managing packages](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-packages)
         * There is also a printable cheat sheet at the bottom of this very page.
-    
+
 
 ## MkDocs and Material for MkDocs
 
