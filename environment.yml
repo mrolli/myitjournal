@@ -1,4 +1,4 @@
-name: itjournal
+name: myitjournal
 dependencies:
   - python=3.9
   - pip
