@@ -72,3 +72,61 @@ You just committed a configuration file with a password in it? You entered a rea
 
 There's good [cheat sheet from GitGuardian](../pdf/RewritingYourGitHistory-Cheatsheet.pdf) that features a flow chart on how
 to proceed and save the situation depending on the stage at which you realised that something wrong happened.
+
+### Damn, I branched off wrong parent branch!
+
+**Symptom**
+
+You created a new feature branch and after some commits you realized that you
+branched off a feature branch instead of themaster/main branch?
+
+The situation now looks like this, right?
+
+    A---B---C---D  main
+        \
+          E---F---G  other-feature-branch
+                  \
+                    H---I---J new-feature-branch (HEAD)
+
+**Discussion and Solution**
+
+Well, you could create a new branch off main and then `git cherry-pick` all commits
+over, which would work, but implies additional work, i.e. if you already have setup
+a pull request and someone already reviewed the code as you would setup a new branch
+and therefore also a new PR and the review would have to be done again...
+
+But we can use git rebase --onto command. It can do exactly what we need.
+Replace the old parent branch with new parent branch. In our case with main branch.  
+For the situation above, we would like to achieve this result:
+
+    A---B---C---D  main
+                |\
+                | E---F---G  other-feature-branch
+                |
+                 \
+                  H'---I'---J' new-feature-branch (HEAD)
+
+To replace parent branch with master, we need to be on new-feature-branch branch and do:
+
+`git rebase --onto main other-feature-branch`
+
+That’s it. Right now we have our current-feature-branch branch based on master
+branch, not like before based on feature-branch.
+
+In the end, I would like to say two more things here. First, if you want to move
+from one parent to another the command should look like this:
+
+!!! success "Solution"
+
+    `git rebase --onto new-parent old-parent`
+
+So right now you can adjust it to your situation.
+
+Second, as you see one schema above, after using `git rebase --onto` we don’t have
+exactly the same commit like before. Code is the same, but the SHA number (you know
+the commit identifier, for example 2d4698b) for each commit is different. Everything
+will be fine, when you work alone on the branch where you want to do the trick.
+In case other people also work on this branch this command can provide problems as
+always when you rewrite history and change commit hashes.
+
+More on `git rebase --onto` can be found in [Git rebase --onto an overview](https://womanonrails.com/git-rebase-onto)
