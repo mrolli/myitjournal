@@ -132,3 +132,8 @@ applications out there, but still they share some archetypes:
 
 !!! tip "... in a nutshell"
     Consult the manual and thoroughly follow it step by step.
+
+!!! abstract "Final step"
+    Finally, when your application of choice is working, prove that it does. For a CMS
+    consider adding the sentence "Yes, I didi it" to the frontpage using the backend
+    editor. Send a screenshot by mail to me!
