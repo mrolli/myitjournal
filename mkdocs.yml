@@ -28,7 +28,7 @@ nav:
 theme:
   name: material
   icon:
-    logo: fontawesome/solid/chalkboard-teacher
+    logo: fontawesome/solid/chalkboard-user
     repo: fontawesome/brands/github
   language: en
   palette:
