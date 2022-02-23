@@ -37,7 +37,7 @@ not, you're covered with systematic examples below.
 !!! abstract "Example 1: All defaults, e.g. only specifying the base box to use"
     ```ruby
     Vagrant.configure("2") do |config|
-      config.vm.box = "bento/rockylinux-8"
+      config.vm.box = "geerlingguy/rockylinux8"
     end
     ```
 
@@ -59,7 +59,7 @@ not, you're covered with systematic examples below.
 !!! abstract "Example 2: Explicitly define a VM and set a machine name"
     ```ruby
     Vagrant.configure("2") do |config|
-      config.vm.box = "bento/rockylinux-8"
+      config.vm.box = "geerlingguy/rockylinux8"
 
       # Explicitly define a vm; first argument is the machine name
       config.vm.define "webserver"
@@ -82,7 +82,7 @@ not, you're covered with systematic examples below.
 !!! abstract "Example 3: Set the hostname of the Guest OS"
     ```ruby
     Vagrant.configure("2") do |config|
-      config.vm.box = "bento/rockylinux-8"
+      config.vm.box = "geerlingguy/rockylinux8"
 
       # Explicitly define a vm; first argument is the machine name
       config.vm.define "webserver"
@@ -110,7 +110,7 @@ not, you're covered with systematic examples below.
 !!! abstract "Example 4: Set the hostname of the Guest OS"
     ```ruby
     Vagrant.configure("2") do |config|
-      config.vm.box = "bento/rockylinux-8"
+      config.vm.box = "geerlingguy/rockylinux8"
 
       # Explicitly define a vm; first argument is the machine name
       config.vm.define "webserver"

@@ -31,7 +31,7 @@ and keep in mind to create commits based on steps we successfully carry out.
     * Initialize an empty git repo (use `gh repo` for that and enjoy its convienience :smile:)
     * Create the Vagrantfile
       * Initialize a new Vagrantfile using the vagrant command
-      * Work with the rockylinux 8 basebox provided by bento (bento/rockylinux-8)
+      * Work with the rockylinux 8 basebox provided by geerlingguy (geerlingguy/rockylinux8)
       * Configure 2 severs in this Vagrant file: webserver and dbserver
 
 Consider that the two linux server have to communicate with each other and you want to connect to them from your browser and/or
