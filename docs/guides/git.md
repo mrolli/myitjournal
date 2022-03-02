@@ -61,6 +61,27 @@ Try the following form of adding files to the index next you have to do that and
 
 ## Recipes
 
+### My commit messages suck
+
+**Symptom**
+
+My colleagues and friends are notoriously complaining about my git commit
+messages. But not only that, they also say that my commits suck pretty
+often. My commits seem not to be atomic, include whitespace changes or
+include too much stuff... but, what is a good commit with an equally good
+commit message anyway?
+
+**Discussion and Solution**
+
+These topics have been discussed a lot and there thankfully is some
+common sense about these issues and good write-ups have been done, well
+worth reading:
+
+- Tim Pope's [Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+- ProGit Book on [Contributing and Commit Guidelines](https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
+- Peter Hutterer's Blog Post [On commit messages](https://who-t.blogspot.com/2009/12/on-commit-messages.html) with how and how not to do git. Especially
+  read the "How not to do it" section!
+
 ### `git push` rejected due to remote changes
 
 **Symptom**
