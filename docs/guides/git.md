@@ -11,7 +11,29 @@ There are a number of configuration files that git offers and that let user cust
 great powers comes with great responsibility. :wink: Not all configuration files and options are mentioned here, there
 [are many more](https://git-scm.com/docs/git-config).
 
-### Repo-local
+### First Time Git setup
+
+This step is really important as you set some default behaviour and especially
+you have to set to identity! This last step - configuring your identity often
+is neglected. Please, don't. No go and read [first time git
+setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+
+Keep in mind that you just set your global identity. Almost every configuation
+key is also changeable on repo level. This means while your global identity may
+be "MrCool <cool@test.com>", you can still have another identity on a per repo
+basis, i.e. when implementing stuff for work. You can set your identity within
+the repo directory by issuing:
+
+    git config user.name  Max Mustermann
+    git config user.email max.mustermann@superag.ch
+
+As you can see, the same commando is run, but `--global` is left out. Now this
+local setting can be found in the config file of the repo, see `.git/config` at
+the top level of the repo itself.
+
+Unsure what your identity is in the current repo? Just run `git config user.name` or `git config user.email` respectively.
+
+### Repo-local configs
 
 #### *gitignore* - Specifies intentionally untracked files to ignore
 
