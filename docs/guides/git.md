@@ -7,15 +7,17 @@
 
 ## Configuration files
 
-There are a number of configuration files that git offers and that let user customize their git experience in great depth. As usual
-great powers comes with great responsibility. :wink: Not all configuration files and options are mentioned here, there
+There are a number of configuration files that git offers and that let user
+customize their git experience in great depth. As usual
+great powers comes with great responsibility. :wink: Not all configuration
+files and options are mentioned here, there
 [are many more](https://git-scm.com/docs/git-config).
 
 ### First Time Git setup
 
 This step is really important as you set some default behaviour and especially
-you have to set to identity! This last step - configuring your identity often
-is neglected. Please, don't. No go and read [first time git
+you have to set your identity! This last step - configuring your identity - is 
+neglected very often. Please, don't. No go and read [first time git
 setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
 Keep in mind that you just set your global identity. Almost every configuation
@@ -63,8 +65,9 @@ Try the following form of adding files to the index next you have to do that and
 
 **Symptom**
 
-I have committed something (to the main branch) and forgot to pull first. Now I can't push anymore as git
-rejects the push with the following message:
+I have committed something (to the main branch) and forgot to pull
+first. Now I can't push anymore as git rejects the push with the
+following message:
 
 !!! failure  "git push rejected"
     ![Screenshot](../img/git_push_reject.png)
