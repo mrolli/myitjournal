@@ -1,5 +1,6 @@
 site/
 .vagrant/
+roles/*
 tmp/
 temp/
 .DS_Store

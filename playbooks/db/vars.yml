@@ -1,0 +1,8 @@
+---
+firewall_allowed_tcp_ports:
+  - "22"
+  - "3306"
+
+mysql_root_password: super-secure-password
+mysql_slow_query_log_enable: true
+mysql_slow_query_time: 2

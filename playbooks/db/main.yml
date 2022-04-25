@@ -1,0 +1,10 @@
+---
+- hosts: dbservers
+  become: true
+
+  vars_files:
+    - vars.yml
+
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.mysql
