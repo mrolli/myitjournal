@@ -6,3 +6,8 @@ firewall_allowed_tcp_ports:
 mysql_root_password: super-secure-password
 mysql_slow_query_log_enable: true
 mysql_slow_query_time: 2
+mysql_users:
+  - name: globe
+    password: trotter
+    host: "%"
+    priv: "world.*:ALL"

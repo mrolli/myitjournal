@@ -8,3 +8,20 @@
   roles:
     - geerlingguy.firewall
     - geerlingguy.mysql
+
+  tasks:
+    - name: Download and extract the world database
+      ansible.builtin.unarchive:
+        src: https://downloads.mysql.com/docs/world-db.tar.gz
+        dest: /root/
+        remote_src: yes
+
+    - name: Check if DB is already imported
+      shell: mysql -e "use world"
+      register: dbstatus
+      changed_when: false
+      failed_when: false
+
+    - name: Import world database into the server
+      shell: mysql -e "SOURCE /root/world-db/world.sql"
+      when: dbstatus.rc != 0
