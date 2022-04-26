@@ -11,8 +11,8 @@ windows:
   panes:
   - focus: true
     shell_command:
-      - sleep 3 && open http://localhost:8000 && clear
-      - nvim -O docs/
+      - sleep 5 && open http://localhost:8000 && clear
+      - lvim -O docs/ mkdocs.yml
   - shell_command:
     #- tmux resize-pane -t :.1 -y 8
     - conda env list 2>/dev/null | grep myitjournal >/dev/null 2>&1
