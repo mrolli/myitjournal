@@ -52,6 +52,14 @@ Keep in mind to use a workflow that is as simple as possible. Do not overly comp
 workflow is very powerful but comes with a certain complexity and therefore too much of a hassle for most projects we do. For
 these projects the [GitHub flow][gh-flow] is much more reasonable and by far easier to understand and live.
 
+## GitHub Actions
+
+Except for the following deep links into the official documentation, no other information is available here as of yet.
+
+- [Using workflows](https://docs.github.com/en/actions/using-workflows#creating-a-workflow-file)
+- [Workflow Syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
+- [Suported platforms for action runners](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on)
+
 ## GitHub on the CLI
 
 There is a wonderful, official [tool][gh-cli] written in Go that let's you do all the GitHub related work on your CLI
