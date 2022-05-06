@@ -125,7 +125,7 @@ to proceed and save the situation depending on the stage at which you realised t
 **Symptom**
 
 You created a new feature branch and after some commits you realized that you
-branched off a feature branch instead of themaster/main branch?
+branched off a feature branch instead of the master/main branch?
 
 The situation now looks like this, right?
 
@@ -160,14 +160,17 @@ To replace parent branch with master, we need to be on new-feature-branch branch
 That’s it. Right now we have our current-feature-branch branch based on master
 branch, not like before based on feature-branch.
 
-In the end, I would like to say two more things here. First, if you want to move
-from one parent to another the command should look like this:
+In the end, I would like to say two more things here. First, the general form -
+rebase some branch from one branch onto another looks like this:
 
 !!! success "Solution"
+    ```
+    git checkout branch2move  
+    git rebase --onto new-parent old-parent
+    ```
 
-    `git rebase --onto new-parent old-parent`
-
-So right now you can adjust it to your situation.
+The destination branch comes first follow by the old branch. The branch that is
+moved is the currently checked out!
 
 Second, as you see one schema above, after using `git rebase --onto` we don’t have
 exactly the same commit like before. Code is the same, but the SHA number (you know
