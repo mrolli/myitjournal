@@ -22,8 +22,8 @@ The fastest way to obtain conda is to install [Miniconda](), a mini version of A
 
 ### Create an environment
 
-The following two tabs illstrate how to create an environment and install packages manually with serveral
-commands while the other shows how to build an environment based on speciifcations found in a YAML file.
+The following two tabs illustrate how to create an environment and install packages manually with several
+commands while the other shows how to build an environment based on specifications found in a YAML file.
 
 === "manually"
 

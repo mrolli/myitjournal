@@ -20,7 +20,7 @@ you have to set your identity! This last step - configuring your identity - is
 neglected very often. Please, don't. No go and read [first time git
 setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
-Keep in mind that you just set your global identity. Almost every configuation
+Keep in mind that you just set your global identity. Almost every configuration
 key is also changeable on repo level. This means while your global identity may
 be "MrCool <cool@test.com>", you can still have another identity on a per repo
 basis, i.e. when implementing stuff for work. You can set your identity within
