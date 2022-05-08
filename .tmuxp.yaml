@@ -3,10 +3,10 @@ global_options:
   automatic-rename: 'off'
 start_directory: ./
 windows:
-- layout: main-horizontal
+- window_name: myitjournal
+  layout: main-horizontal
   options:
-    main-pane-height: 90%
-  window_name: myitjournal
+    main-pane-height: 80%
   focus: true
   panes:
   - focus: true
@@ -19,3 +19,4 @@ windows:
       || conda env create -f environment.yml
     - conda activate myitjournal
     - mkdocs serve
+  - pane
