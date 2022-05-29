@@ -12,6 +12,7 @@ nav:
       - "Webapp Stack": courses/webappstack.md
       - "The World in SQL": courses/world_in_sql.md
   - "Guides":
+      - "Ansible": guides/ansible.md
       - "Git": guides/git.md
       - "Github": guides/github.md
       - "Homebrew": guides/homebrew.md
