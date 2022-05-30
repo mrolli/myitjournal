@@ -9,7 +9,7 @@ nav:
   - "Courses":
     - "Tools": courses/tools.md
     - "My IT Journal":
-      - "Work instruction": courses/myitjournal.md
+      - "Work instructions": courses/myitjournal.md
       - "WB_KW32": wb_demo.md
     - "Webapp Stack": courses/webappstack.md
     - "The World in SQL": courses/world_in_sql.md
