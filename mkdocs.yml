@@ -8,7 +8,9 @@ nav:
   - "Home": index.md
   - "Courses":
     - "Tools": courses/tools.md
-    - "My IT Journal": courses/myitjournal.md
+    - "My IT Journal":
+      - "Work instruction": courses/myitjournal.md
+      - "WB_KW32": wb_demo.md
     - "Webapp Stack": courses/webappstack.md
     - "The World in SQL": courses/world_in_sql.md
   - "Guides":
@@ -24,7 +26,6 @@ nav:
     - "Vim": guides/vim.md
     - "Miscellaneous": guides/misc.md
   - "MdCheat": mdcheat.md
-  - "WB_KW32": wb_demo.md
   - About Me: about.md
 
 theme:
