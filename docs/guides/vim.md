@@ -24,8 +24,10 @@ There is huge Vim tutorial in 5 pieces targetting beginners and builds up to vet
 * [A Vim Guide for Adept Users](https://thevaluable.dev/vim-adept/)
 * [A Vim Guide for Veteran Users](https://thevaluable.dev/vim-veteran/)
 
-Another Tutorial that is organized in levels:
+And other Tutorials with its strengths and weaknesses:
 
+* [Boost your coding fu](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/table-of-contents) 
+* [Boost.. Cheatsheet](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/cheatsheet/) 
 * [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 
 And espcially about Text Objects:
@@ -82,6 +84,7 @@ There's a good write-up on [using markdown in Vim][vim-markdown]
 
 [vim-markdown]: https://vim.works/2019/03/16/using-markdown-in-vim/
 [vim-text-objects]: https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/
+[Markdown Writing and Previewing in Neovim - A Complete Guide](https://jdhao.github.io/2019/01/15/markdown_edit_preview_nvim/)
 
 ## Further Readings
 
