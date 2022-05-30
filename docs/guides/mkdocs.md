@@ -50,7 +50,7 @@ on page [Publish your site](https://squidfunk.github.io/mkdocs-material/publishi
 
 ## Further Reading
 
-TBD
+- [Converting from/to markdown](http://www.tips.mostserio.us/cnvffmt/) 
 
 [1]: https://squidfunk.github.io/mkdocs-material/getting-started/
 [2]: https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
