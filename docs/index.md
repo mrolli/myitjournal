@@ -30,11 +30,19 @@ Below follows the default index.md of a mkdocs installation as a quickref.
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-## Notes
+## Icons and Emojis
 
 - :smile: - `:smile:`
-- :material-account-circle: – `.icons/material/account-circle.svg`
-- :fontawesome-regular-laugh-wink: – `.icons/fontawesome/regular/laugh-wink.svg`
-- :octicons-repo-push-24: – `.icons/octicons/repo-push-24.svg`
+- :material-account-circle: – `:material-account-circle:`
+- :fontawesome-regular-face-laugh-wink: – `:fontawesome-regular-face-laugh-wink:`
+- :octicons-repo-push-24: – `:octicons-repo-push-24:`
+- :material-apple-keyboard-command: - `:material-apple-keyboard-command:`
+- :material-apple-keyboard-option: - `:material-apple-keyboard-option:`
+- :material-apple-keyboard-control: - `:material-apple-keyboard-control:`
+- :material-apple-keyboard-shift: - `:material-apple-keyboard-shift:`
+- :material-keyboard-return: - `:material-keyboard-return:`
+- :material-keyboard-space: - `:material-keyboard-space:`
 
-For full documentation visit [material-mkdocs](https://squidfunk.github.io/mkdocs-material/) and [mkdocs.org](https://www.mkdocs.org).
+For more icons and emojis use the [emojis/icons search bar](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) in the mkdocs-material documentation.
+
+For the full documentation visit [material-mkdocs](https://squidfunk.github.io/mkdocs-material/) and [mkdocs.org](https://www.mkdocs.org).
