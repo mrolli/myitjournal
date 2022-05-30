@@ -18,6 +18,7 @@ nav:
     - "Homebrew": guides/homebrew.md
     - "Miniconda": guides/miniconda.md
     - "MkDocs": guides/mkdocs.md
+    - "Neovim": guides/neovim.md
     - "tmux": guides/tmux.md
     - "Vagrant": guides/vagrant.md
     - "Vim": guides/vim.md
