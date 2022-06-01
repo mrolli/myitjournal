@@ -2,7 +2,26 @@
 
 ## Learning Git
 
+The following three videos by David Mahler are a decent introduction to Git
+version control system and teach you the key concepts of Git in a illustrative
+way. Runtime is 30m each for total for 1.5h. I wish I started to learn Git this
+way back then. :stuck_out_tongue_winking_eye:
+
+<!-- * [Core Concepts](https://www.youtube.com/watch?v=uR6G2v_WsRA)  -->
+<!-- * [Branching and Merging](https://www.youtube.com/watch?v=FyAAIHHClqI)  -->
+<!-- * [Remotes](https://www.youtube.com/watch?v=Gg4bLk8cGNo)  -->
+[![Core Concepts](https://img.youtube.com/vi/uR6G2v_WsRA/0.jpg)](https://www.youtube.com/watch?v=uR6G2v_WsRA)  
+[![Branching and Merging](https://img.youtube.com/vi/FyAAIHHClqI/0.jpg)](https://www.youtube.com/watch?v=FyAAIHHClqI)  
+[![Remotes](https://img.youtube.com/vi/Gg4bLk8cGNo/0.jpg)](https://www.youtube.com/watch?v=Gg4bLk8cGNo)  
+
+
+In addition, the below book, the visual overview of the most used Git commands
+and lastly the visual playground below are helpful too. And.. Git's very good
+documentation as the one source of truth as reference.
+
+* [Git Reference](https://git-scm.com/docs) 
 * [Pro Git Book](https://git-scm.com/book/en/v2)
+* [A Visual Git Reference](https://git-scm.com/docs) 
 * [Visualizing Git](https://git-school.github.io/visualizing-git/)
 
 ## Configuration files
