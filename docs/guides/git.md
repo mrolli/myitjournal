@@ -67,7 +67,7 @@ A gitattributes file is a simple text file that gives attributes to pathnames, i
 
 ## Articles
 
-#### **[The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git)**
+### **[The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git)** <small>(15' read)</small>
 
 Often beginners find it oddly strange that there is an index/staging area in Git and are not aware
 for what this thing can be used. Other VCS do not have this. Nevertheless it's not an addition just
