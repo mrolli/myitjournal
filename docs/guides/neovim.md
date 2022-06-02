@@ -11,3 +11,9 @@ based configuration to lua based configuration. These are three articles that he
 - [Everything you need to know to configure Neovim using lua](https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/) 
 - [From init.vim to init.lua](https://teukka.tech/luanvim.html) 
 - [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide)
+
+## This & That
+
+### Various Links
+
+[Script to convert snippets from UltiSnips to luasnip](https://github.com/L3MON4D3/LuaSnip/issues/201#issuecomment-950132369)
