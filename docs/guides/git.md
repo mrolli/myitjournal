@@ -46,7 +46,7 @@ basis, i.e. when implementing stuff for work. You can set your identity within
 the repo directory by issuing:
 
     git config user.name  Max Mustermann
-    git config user.email max.mustermann@superag.ch
+    git config user.email max.mustermann@example.com
 
 As you can see, the same commando is run, but `--global` is left out. Now this
 local setting can be found in the config file of the repo, see `.git/config` at
