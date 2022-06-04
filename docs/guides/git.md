@@ -67,7 +67,7 @@ A gitattributes file is a simple text file that gives attributes to pathnames, i
 
 ## Articles
 
-### **[The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git)** <small>(15' read)</small>
+### [The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git) <small>(15' read)</small>
 
 Often beginners find it oddly strange that there is an index/staging area in Git and are not aware
 for what this thing can be used. Other VCS do not have this. Nevertheless it's not an addition just
@@ -77,6 +77,31 @@ that most beginners overlook (and tutorials almost never teach you), e.g. `--pat
 
 Try the following form of adding files to the index next you have to do that and see what happens!
 `git add --patch somepathspec` or `git add -p somepathspec`
+
+### [A successful Git branching model][gitflow] <small>(20' read)</small>
+
+This article is the original article from 2010 that introduced/presented the
+Git-flow workflow for managing the code for software projects. This is quite a
+complex workflow featuring the master and develop branches as the permanent
+branches and the branch types feature branch, release branch and hotfix branch
+based on the needs. The articles demonstrates a lot of brain work done about
+handling different situations and how to solve issues. **Please read the author's
+reflection at the top and keep it in mind! While this is a proven Git branching
+strategy it is quite complex and for many situations and projects a complete
+overkill.**  
+Make yourself familiar with other Git branch strategies like the
+[Github Flow][ghflow] or the [Gitlab Flow][glflow] and then choose the simplest
+that is still satisfying your real needs (not the nice to haves). Best use
+something that others in your team are already familiar and successful with!
+
+There's a good [comparison of git branching strategies][gbstrats]
+over at flaghsip.io. You should least know the principles, pros/cons and
+differences between these four strategies.
+
+[gitflow]: https://nvie.com/posts/a-successful-git-branching-model/
+[ghflow]: https://githubflow.github.io/
+[glflow]: https://docs.gitlab.com/ee/topics/gitlab_flow.html
+[gbstrats]: https://www.flagship.io/git-branching-strategies/
 
 ## Recipes
 
