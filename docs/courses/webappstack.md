@@ -14,8 +14,6 @@ web application onto it. To learn a different aspects the following assumptions 
 You are free to choose the webapplication that you want to deploy. There are many PHP-webapplications out
 there. A save choice might be a forum or a content management system, i.e. [Flarum], [phpBB], [Wordpress], ...
 
-*[LAMP]: Linux-(MySQL|Mariadb)-PHP Stack*
-
 [Flarum]: https://flarum.org/
 [phpBB]: https://www.phpbb.com/
 [Wordpress]: https://de.wordpress.org/
