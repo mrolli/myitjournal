@@ -30,18 +30,20 @@ Below follows the default index.md of a mkdocs installation as a quickref.
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-## Icons and Emojis
+## Emojis, Icons and Keys
 
-- :smile: - `:smile:`
-- :material-account-circle: – `:material-account-circle:`
-- :fontawesome-regular-face-laugh-wink: – `:fontawesome-regular-face-laugh-wink:`
-- :octicons-repo-push-24: – `:octicons-repo-push-24:`
-- :material-apple-keyboard-command: - `:material-apple-keyboard-command:`
-- :material-apple-keyboard-option: - `:material-apple-keyboard-option:`
-- :material-apple-keyboard-control: - `:material-apple-keyboard-control:`
-- :material-apple-keyboard-shift: - `:material-apple-keyboard-shift:`
-- :material-keyboard-return: - `:material-keyboard-return:`
-- :material-keyboard-space: - `:material-keyboard-space:`
+- :smile:   `:smile:`
+- :material-account-circle:   `:material-account-circle:`
+- :fontawesome-regular-face-laugh-wink:   `:fontawesome-regular-face-laugh-wink:`
+- :octicons-repo-push-24:   `:octicons-repo-push-24:`
+- :material-apple-keyboard-command:   `:material-apple-keyboard-command:`
+- :material-apple-keyboard-option:   `:material-apple-keyboard-option:`
+- :material-apple-keyboard-control:   `:material-apple-keyboard-control:`
+- :material-apple-keyboard-shift:   `:material-apple-keyboard-shift:`
+- :material-keyboard-return:   `:material-keyboard-return:`
+- :material-keyboard-space:   `:material-keyboard-space:`
+- <kbd>Space</kbd> + <kbd>f</kbd>   `<kbd>Space</kbd>+<kbd>f</kbd>`
+- <kbd>:material-apple-keyboard-command:</kbd> + <kbd>F1</kbd>   `<kbd>:material-apple-keyboard-command:</kbd> + <kbd>F1</kbd>`
 
 For more icons and emojis use the [emojis/icons search bar](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) in the mkdocs-material documentation.
 
