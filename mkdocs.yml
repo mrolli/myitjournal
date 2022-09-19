@@ -19,6 +19,7 @@ nav:
     - "Github": guides/github.md
     - "Homebrew": guides/homebrew.md
     - "Miniconda": guides/miniconda.md
+    - "Mnemonics": guides/mnemonics.md
     - "MkDocs": guides/mkdocs.md
     - "Neovim": guides/neovim.md
     - "tmux": guides/tmux.md
