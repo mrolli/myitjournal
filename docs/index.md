@@ -42,10 +42,13 @@ Below follows the default index.md of a mkdocs installation as a quickref.
 - :material-apple-keyboard-shift:   `:material-apple-keyboard-shift:`
 - :material-keyboard-return:   `:material-keyboard-return:`
 - :material-keyboard-space:   `:material-keyboard-space:`
-- <kbd>Space</kbd> + <kbd>f</kbd>   `<kbd>Space</kbd>+<kbd>f</kbd>`
-- <kbd>:material-apple-keyboard-command:</kbd> + <kbd>F1</kbd>   `<kbd>:material-apple-keyboard-command:</kbd> + <kbd>F1</kbd>`
+- ++space+f++   `++space+f++`
+- ++command+f1++  `++command+f1++`
 
-For more icons and emojis use the [emojis/icons search bar](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) in the mkdocs-material documentation.
+For more icons and emojis use the [emojis/icons search
+bar](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) in
+the mkdocs-material documentation. The keyboard keys rendering is done using
+the [`pymxdown.keys` extension](https://facelessuser.github.io/pymdown-extensions/extensions/keys/).
 
 For the full documentation visit [material-mkdocs](https://squidfunk.github.io/mkdocs-material/) and [mkdocs.org](https://www.mkdocs.org).
 
