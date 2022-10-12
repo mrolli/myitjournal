@@ -1,35 +1,19 @@
+# Project information
 site_name: "My IT Journal"
-repo_url: "https://github.com/mrolli/myitjournal"
+site_author: "Michael Rolli"
+site_description: >-
+  Collected tips and guides whenever I found it worth or needed to keep the
+  insights to help my brain or to give guidance to our apprentices.
+
+# Repository
+repo_name: mrolli/myitjournal
+repo_url: https://github.com/mrolli/myitjournal
 edit_uri: "edit/main/docs"
-repo_name: "mrolli/myitjournal"
+
+# Copyright
 copyright: "Copyright &copy; 2022 Michael Rolli<br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>."
 
-nav:
-  - "Home": index.md
-  - "Courses":
-    - "Tools": courses/tools.md
-    - "My IT Journal":
-      - "Work instructions": courses/myitjournal.md
-      - "WB_KW32": wb_demo.md
-    - "Webapp Stack": courses/webappstack.md
-    - "The World in SQL": courses/world_in_sql.md
-  - "Guides":
-    - "Ansible": guides/ansible.md
-    - "Homebrew": guides/homebrew.md
-    - "Miniconda": guides/miniconda.md
-    - "Mnemonics": guides/mnemonics.md
-    - "MkDocs": guides/mkdocs.md
-    - "Neovim": guides/neovim.md
-    - "tmux": guides/tmux.md
-    - "Vagrant": guides/vagrant.md
-    - "Vim": guides/vim.md
-    - "Miscellaneous": guides/misc.md
-  - "Git/GitHub":
-    - "Git": gitandco/git.md
-    - "Github": gitandco/github.md
-  - "MdCheat": mdcheat.md
-  - About Me: about.md
-
+# Configuration
 theme:
   name: material
   icon:
@@ -98,3 +82,31 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+
+# Page tree
+nav:
+  - "Home": index.md
+  - "Courses":
+    - "Tools": courses/tools.md
+    - "My IT Journal":
+      - "Work instructions": courses/myitjournal.md
+      - "WB_KW32": wb_demo.md
+    - "Webapp Stack": courses/webappstack.md
+    - "The World in SQL": courses/world_in_sql.md
+  - "Guides":
+    - "Ansible": guides/ansible.md
+    - "Homebrew": guides/homebrew.md
+    - "Miniconda": guides/miniconda.md
+    - "Mnemonics": guides/mnemonics.md
+    - "MkDocs": guides/mkdocs.md
+    - "Neovim": guides/neovim.md
+    - "tmux": guides/tmux.md
+    - "Vagrant": guides/vagrant.md
+    - "Vim": guides/vim.md
+    - "Miscellaneous": guides/misc.md
+  - "Git/GitHub":
+    - "Git": gitandco/git.md
+    - "Github": gitandco/github.md
+  - "MdCheat": mdcheat.md
+  - About Me: about.md
+
