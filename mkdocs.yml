@@ -103,6 +103,8 @@ nav:
     - "tmux": guides/tmux.md
     - "Vagrant": guides/vagrant.md
     - "Vim": guides/vim.md
+    - "Unix Commands":
+      - "Sed": guides/unix/sed.md
     - "Miscellaneous": guides/misc.md
   - "Git/GitHub":
     - "Git": gitandco/git.md
