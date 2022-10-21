@@ -48,7 +48,7 @@ and 443** of the guestOS to you laptop, good local ports on the host OS could be
     1. **Secure** the server for production use - try to figure out, which steps to carry out!
 
 ??? success "Solutions - Databse server installation"
-    Please find my approach to the above tasks in the script [provision_dbserver].  
+    Please find my approach to the above tasks in the script [provision_dbserver.sh].  
     Regarding the charset question set every aspect to charset `utf8mb4` and collation `utf8mb4_unicode_ci`, see
     [my.cnf.d/charset.cnf]. For details of the configuration and the reasoning see [the guide on Charsets](../guides/misc.md).
 
@@ -83,7 +83,7 @@ an empty password?
 
 [MariaDB]: https://mariadb.org/
 [MySQL]: https://dev.mysql.com/
-[provision_dbserver]: https://github.com/mrolli/webappstack/blob/main/provision_dbserver
+[provision_dbserver.sh]: https://github.com/mrolli/webappstack/blob/main/provision_dbserver.sh
 [my.cnf.d/charset.cnf]: https://github.com/mrolli/webappstack/blob/main/my.cnf.d/charset.cnf
 
 ## Provision the Webserver
@@ -110,12 +110,12 @@ an empty password?
     Is it working? You should see the follwoing webpage:
 
 ??? success "Solution - Installing Apache and PHP"
-    Please find my approach to the above tasks in the script [provision_webserver].
+    Please find my approach to the above tasks in the script [provision_webserver.sh].
     Upon installation you should be able to load the page at the IP you defined in the Vagrantfile, in my case at
     <http://192.168.33.10/>. If you also forwarded the HTTP/HTTPS ports, then you can also load the same page at
     <http://localhost:8080>.
 
-[provision_webserver]: https://github.com/mrolli/webappstack/blob/main/provision_webserver
+[provision_webserver.sh]: https://github.com/mrolli/webappstack/blob/main/provision_webserver.sh
 
 ## Deploy an Application
 
