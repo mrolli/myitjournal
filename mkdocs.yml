@@ -107,7 +107,9 @@ nav:
       - "Sed": guides/unix/sed.md
     - "Miscellaneous": guides/misc.md
   - "Git/GitHub":
-    - "Git": gitandco/git.md
+    - "Git":
+      - "Learning Git": gitandco/git.md
+      - "Git Recipes": gitandco/gitrecipes.md
     - "Github": gitandco/github.md
   - "MdCheat": mdcheat.md
   - About Me: about.md
