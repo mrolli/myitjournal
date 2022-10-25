@@ -508,6 +508,11 @@ is maintained by the W3C.
 *[HTML]: Hyper Text Markup Language  
 *[W3C]:  World Wide Web Consortium
 
+!!! hint ""
+    It's also possible to manage abbreviations centrally in a glossary. See [mkdocs-material documentation] on this matter.
+
+[mkdocs-material documentation]: https://squidfunk.github.io/mkdocs-material/reference/tooltips/#includesabbreviationsmd
+
 ## Definition Lists
 
 ```
