@@ -1,18 +1,28 @@
 There are many relational databases out there and all of them have the **SQL - the
-Structured Query Langauge** - in common though different dialects exist. Knowing
+Structured Query Language** - in common though different dialects exist. Knowing
 SQL at least on a basic to intermediate level is beneficial for the every day
 life of an IT guy as you never know where you'll encounter it and it empowers
 you to use something better than Excel when solving a more complex task around
 data.
 
-The course here is built on exercises that get gradually more difficult. You are
+!!! warning ""
+    The course here is a repetition of SQL. It's not meant to be the
+    first introduction to SQL. You are also expected to be able to install a DB
+    server and import an SQL file. If you are still a rookie, then you should
+    follow a tutorial alongside to learn the stuff systematically.
+
+The course is built on exercises that get gradually more difficult. You are
 encouraged to solve the exercises by yourself! Believe me, the best way to learn
 SQL is by starting with basic queries and then add up the restrictions you have.
-While you then and when land in a dead end, you still learned a lot, at least a
-way not to do it! You then start a new approach to question and try to make the
-query more complex again until you have the solution you want. If all fails, you
-can find the solutions at the end of the page. Keep in mind, three is often more
-than one solution.
+
+While you build queries you might land in a dead end and you fiddle around and
+still can't get the right result. This is sometimes tedious but nevertheless you
+learn a lot along the way, at least a way not to do it! You then start a new
+approach to the question and try to make the query more complex again until you
+have the solution you want.
+
+If all fails, you can find the solutions at the end of the page. Keep in mind,
+three is often more than one solution.
 
 ## Preparations
 
