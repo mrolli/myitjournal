@@ -24,7 +24,9 @@ might want to follow the [webappstack course](webappstack.md) or fetch a
 pre-built VM from the internet featuring MariaDB or any other relational
 database that speaks SQL.
 
-## Understanding the Database Itself
+## Journey Around the World
+
+### Understanding the Database
 
 The data about our world is now store in a database. That makes it possible to
 use the SQL languages to query the data and therefore ask questions that we
@@ -53,9 +55,6 @@ within the same country.
 
     [ERD]: https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model
 
-
-## Journey Around the World
-
 Let's start our journey around the world by investigating some facts and
 getting the numbers. From counting simply counting countries to finding nifty
 facts. The possibilities are endless and you are invited to create further
@@ -63,12 +62,46 @@ questions after you have solved all of mine.
 Talking about mine, the difficulty increased from question to question while new
 feature of SQL are gradually introduced.
 
+### Basic Data Selection
+
 !!! abstract "Exercise 3 - Countries in the World"
     - Create a list of all countries and their country code.
     - How many countries are known to the database.
     - Which countries start with the letter M?
+    - What's the population of Switzerland?
+
+Aren't you surprised? Are there really only 7.1 millions of people in
+Switzerland. Shouldn't there be more than 8 millions already? Yes, the data we
+are dealing with is quite old! We will see this at other places too!
+
+Let's talk about continents and regions now. We know that there are the columns
+continent and region. That means, every country belongs to a region and a
+continent. Some countries are in the same region or on the same continent.
+
+!!! abstract "Exercise 4 - Relationships, anyone? - an excursion"
+    Attribute continent as well as attribute region are modeled as columns here.
+    Is this a good choice? Are there other, better possibilities to model these
+    relationships? How would you model the relationships between continents,
+    regions and countries? Draw a better ERD for these relationships.
+
+Now back to selecting data in our country table. As regions and continents are
+not normalized we have to select a little different and have to use special
+select flavors.
+
+!!! abstract "Exercise 5 - From continents and regions"
+    - Can you fetch a list of all continents and their regions ordered first by
+      continent and then by region?
+    - Can you fetch the list of countries that belong to Europe but not to the
+      following regions:
+        - Western Europe
+        - British Islands
+        - Nordic Countries
+    - How many of the above are known to the database?
+
 
 ## Hints and Solutions
+
+### Understanding the Database
 
 ??? hint "Hints ex 1 - What do we know about the world?"
     These questions can be answered using [DESCRIBE] statement, [SHOW TABLES ]
@@ -85,7 +118,6 @@ feature of SQL are gradually introduced.
         DESCRIBE city;
         SHOW COLUMNS FROM city;
         ```
-
 
 
 ??? hint "Hints ex 2 - Relationships and ERD"
@@ -120,11 +152,15 @@ feature of SQL are gradually introduced.
             COUNTRY ||--o{ COUNTRYLANGUAGE : has
             COUNTRYLANGUAGE {
                 string CountryCode FK "The country code"
-                string Language
+                string
+                Language
                 enum IsOfficial "T, F default: F"
                 decimal Percentage
             }
         ```
+
+### Basic Data Selection
+
 ??? hint "Hints ex 3 - Countries in the world"
     - To answer the first exercise select only the columns name and country code
     - For the second question you have to use the [COUNT] function.
@@ -135,13 +171,56 @@ feature of SQL are gradually introduced.
         SELECT Name, Code FROM country;
         SELECT count(Code) FROM country;
         SELECT Name FROM country WHERE Name like 'M%';
+        SELECT Population FROM country WHERE Name = 'Switzerland';
         ```
 
-??? hint "Hints ex 4"
+??? hint "Hints ex 4 - Relationships, anyone?"
+    Both attributes are not normalized, which means their string values occurr
+    multiple times in the column. When adding new country there's a chance for
+    typos, i.e. 'Europ' instead of 'Europe' and this country would then not bei on
+    the content. Therefore we would normally normalize both to their own tables
+    and add primary and foreign key to reference the data. Can you come up with
+    a solution for a fully normalized country, region, continent relationship?
+    ??? hint "Solution"
+        ```mermaid
+        erDiagram
+            CONTINENT {
+                int ID PK "The identifier of the continent"
+                string Name
+            }
+            CONTINENT ||--|{ REGION : divded_in
+            REGION {
+                int ID PK "The identifier of the region"
+                string Name
+                int Continent FK "The identifier of the continent"
+            }
+            COUNTRY {
+                string Code PK "The country code"
+                string Name
+                int Region FK "The identifier to the Region"
+            }
+            REGION ||--|{ COUNTRY : has
+        ```
+
+??? hint "Hints ex 5 - From continents and regions"
+    If you use a standard [SELECT] statement, you will have way too many row in
+    your output, namely one for each country. So there must be a way to sort out
+    doubles to only have a distinct set of results.
+    For the second and third question, there are many solutions. Try to find at
+    least two. One of them should use the given regions and state that the
+    countries should not be in these regions.
     ??? hint "Solution"
         ```sql
             SELECT DISTINCT Continent, Region FROM country ORDER BY Continent, Region;
+            SELECT Name, Region FROM country WHERE Continent='Europe' AND Region NOT IN ('Western Europe', 'British Islands', 'Nordic Countries');
+            a) SELECT count(Name) FROM country WHERE Continent='Europe' AND Region NOT IN ('Western Europe', 'British Islands', 'Nordic Countries');
+            b) SELECT count(Name) FROM country WHERE Continent='Europe' AND (Region = 'Baltic Countries' OR Region = 'Southern Europe' OR Region = 'Eastern Europe');
         ```
+        !!! warning ""
+            The WHERE clause "Continent='Europe'" is not necessary as
+            the selected regions are in Europe anyway.  
+            The above two queries only lead to the same result if there are no
+            countries not belonging to these regions in both queries.
 
 ??? hint "Hints ex X"
     ??? hint "Solution"
