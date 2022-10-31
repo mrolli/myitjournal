@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   # Base VM OS configuration.
-  config.vm.box = "rockylinux/8"
+  config.vm.box = 'geerlingguy/rockylinux8'
   config.vm.box_check_update = false
   config.ssh.insert_key = false
   config.vm.synced_folder '.', '/vagrant', disabled: true
