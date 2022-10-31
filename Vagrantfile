@@ -36,4 +36,19 @@ Vagrant.configure('2') do |config|
       }
     end
   end
+
+  # MySQL in container
+  config.vm.define 'db2' do |db2|
+    db2.vm.hostname = 'db2.test'
+    db2.vm.network :private_network, ip: '192.168.2.103', virtualbox__intnet: 'myitjournal'
+    db2.vm.network 'forwarded_port', guest: 3306, host: 8406
+    db2.vm.synced_folder '.', '/vagrant'
+
+    db2.vm.provision :hosts, sync_hosts: true
+    # Run Ansible provisioner once for all VMs at the end.
+    db2.vm.provision 'ansible_local' do |ansible|
+      ansible.playbook = 'configure.yml'
+      ansible.inventory_path = 'inventories/vagrant/inventory_local.ini'
+    end
+  end
 end
