@@ -14,7 +14,7 @@ still trying to be useful for our young learners. Therefore it is and will alway
 !!! success "Have Fun!"
     Now start with whatever interests you the most.
 
-Below follows the default index.md of a mkdocs installation as a quickref.
+Below follows the default index.md of a MkDocs installation as a quickref.
 
 ## Commands
 

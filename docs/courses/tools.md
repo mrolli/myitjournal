@@ -18,7 +18,7 @@ Find some facts about Homebrew at [Wikipedia](https://en.wikipedia.org/wiki/Home
 Homebrew and its documentation can be found at [https://brew.sh/](https://brew.sh/)
 
 !!! abstract "Task"
-    The above should be enough to get started. Now
+    The above should be enough to get you started. Now
 
     * Install Homebrew
     * Verify its in a working state (see commands available)
@@ -26,16 +26,23 @@ Homebrew and its documentation can be found at [https://brew.sh/](https://brew.s
 
 ## Vim
 
-Auf jeden Fall wäre die nächste Etappe, den Texteditor Vim zu installieren:
-Wissenswertes/Historie zu Vim: https://de.wikipedia.org/wiki/Vim
+Next on the plan is [Vim](https://www.vim.org/) the ubiquitous, powerful,
+command line-based text editor. Sure the are the GUI-based editors that you are
+used to, such as [Visual Studio Code], [Sublime Text] or [Atom]. But, as
+previously said, when working on Linux, Vim is already installed. No need to
+install "your" text editor first. It's just there there
 
-Für das installieren von Vim haben wir ja jetzt Homebrew. ;-)
+To install Vim, we now have Homebrew. There is a more modern drop-in replacement
+called [Neovim] that has Lua support built-in. It works exactly like Vim but has
+some other advantages beyond this course, but if you fall in love with Vim, you
+should consider switching. Or you already install it now.
 
-Dann habe ich dir versprochen, noch einen "GUI-Texteditor" zu empfehlen. Es sind sogar zwei. Beide per Homebrew installierbar:
-- Sublime Text (https://www.sublimetext.com/)
-- Atom (https://atom.io/)
+!!! abstract "Install Vim or Neovim"
+    Now either install `Vim` or `Neovim`. You know how. ;
 
-Beide sind prima. Matthias benutzt z.B. Atom. Ich würde wohl mal mit Atom beginnen, aber beide testen. Den, den du nicht behalten willst, kannst du dann dank Homebrew wieder deinstallieren. Du sollst ja den erstmal nur nutzen, solange du im Vi noch nicht sattelfest bist.
+[Visual Studio Code]: https://code.visualstudio.com/
+[Sublime Text]: https://www.sublimetext.com/
+[Atom]: https://atom.io/
 
 ## Oracle Virtualbox
 
