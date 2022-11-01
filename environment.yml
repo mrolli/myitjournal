@@ -8,4 +8,5 @@ dependencies:
       - ansible
       - ansible-lint
       - argcomplete
+      - pre-commit
       - yamllint

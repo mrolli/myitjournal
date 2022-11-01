@@ -85,5 +85,5 @@ This guide alone will introduce you to a lot of important features and use
 cases. Take the time and go through it.
 
 !!! abstract "Install Vagrant"
-    As you might have guessed, also Vagrant is installable using Homebrew. Install the
-    tool using the formula `vagrant`
+    As you might have guessed, also Vagrant is installable using Homebrew.
+    Install the tool using the formula `vagrant`
