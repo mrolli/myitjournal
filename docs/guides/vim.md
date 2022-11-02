@@ -7,16 +7,16 @@
     has no python support built in. Therefore it's suggested to install a recent
     version using Homebrew: `brew install vim`
 
+=== "Linux"
+
+    Every Linux distribution brings a Vim package that is installable by using the distribution's package manager.
+
 Besides Vim also consider to **use Neovim** right away. This is a modern drop-in
 replacement for Vim. That means it function almost identical, can almost be
 identically configured, but feature Lua support and a lot more possibilities and
 features. Neovim can also be installed using Homebrew or from a pre-built
 package. See [Neovim releases](https://github.com/neovim/neovim/releases/tag/v0.8.0)
 for the download links.
-
-=== "Linux"
-
-    Every Linux distribution brings a Vim package that is installable by using the distribution's package manager.
 
 ## Tutorials
 
