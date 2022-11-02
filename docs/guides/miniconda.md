@@ -1,14 +1,17 @@
 # Miniconda
 
-The fastest way to obtain conda is to install [Miniconda](), a mini version of Anaconda that includes only conda and its dependencies. If you prefer to have conda plus over 7,500 open-source packages, install Anaconda.
+The fastest way to obtain conda is to install [Miniconda](https://docs.conda.io/en/latest/miniconda.html),
+a mini version of Anaconda that includes only conda and its dependencies. If you
+prefer to have conda plus over 7,500 open-source packages, install Anaconda.
 
 ## Installation
 
 === "macOS (Homebrew)"
     On macOS it's easiest to use Homebrew for the task:
-    ```
-    brew install miniconda
-    ```
+        ```bash
+        brew install miniconda
+
+        ```
 
 === "macOS (Installer Script)"
     See [project documentaiton][1] for the installer script.
@@ -22,8 +25,9 @@ The fastest way to obtain conda is to install [Miniconda](), a mini version of A
 
 ### Create an environment
 
-The following two tabs illustrate how to create an environment and install packages manually with several
-commands while the other shows how to build an environment based on specifications found in a YAML file.
+The following two tabs illustrate how to create an environment and install packages
+manually with several commands while the other shows how to build an environment
+based on specifications found in a YAML file.
 
 === "manually"
 
@@ -54,12 +58,15 @@ commands while the other shows how to build an environment based on specificatio
     ```
 
 !!! tip "Add environment.yml to git repo"
-    When having a python environemnt for project, it's good practice to have the specification
-    in a file `environment.yml` toplevel in the git repo of the project. Like this, you document
-    what needs to be install and you (and your contributors) can fire up the evironment by just
-    cloning the repo and running `conda create` within the toplevel directory. Done.
+    When having a python environemnt for project, it's good practice to have the
+    specification in a file `environment.yml` toplevel in the git repo of the project.
+    Like this, you document what needs to be install and you (and your contributors)
+    can fire up the evironment by just cloning the repo and running `conda create`
+    within the toplevel directory. Done.
 
 ### Managing environments
 
-Further commands regarding the management of environments outlined in the [documentation] in good details. Have a look there!
+Further commands regarding the management of environments outlined in the [documentation]
+in good details. Have a look there!
 
+[documentation]: https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments
