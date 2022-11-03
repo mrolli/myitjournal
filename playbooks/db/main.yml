@@ -14,7 +14,7 @@
       ansible.builtin.unarchive:
         src: https://downloads.mysql.com/docs/world-db.tar.gz
         dest: /root/
-        remote_src: yes
+        remote_src: true
 
     - name: Check if DB is already imported
       shell: mysql -e "use world"

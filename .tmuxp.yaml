@@ -1,22 +1,23 @@
+---
 session_name: myitjournal
 global_options:
   automatic-rename: 'off'
 start_directory: ./
 windows:
-- window_name: myitjournal
-  layout: main-horizontal
-  options:
-    main-pane-height: 80%
-  focus: true
-  panes:
-  - focus: true
-    shell_command:
-    - sleep 5 && open http://localhost:8000 && clear
-    - lvim mkdocs.yml
-  - shell_command:
-    #- tmux resize-pane -t :.1 -y 8
-    - conda env list 2>/dev/null | grep myitjournal >/dev/null 2>&1
-      || conda env create -f environment.yml
-    - conda activate myitjournal
-    - mkdocs serve
-  - pane
+  - window_name: myitjournal
+    layout: main-horizontal
+    options:
+      main-pane-height: 80%
+    focus: true
+    panes:
+      - focus: true
+        shell_command:
+          - sleep 5 && open http://localhost:8000 && clear
+          - lvim mkdocs.yml
+      - shell_command:
+          # - tmux resize-pane -t :.1 -y 8
+          - conda env list 2>/dev/null | grep myitjournal >/dev/null 2>&1
+            || conda env create -f environment.yml
+          - conda activate myitjournal
+          - mkdocs serve
+      - pane
