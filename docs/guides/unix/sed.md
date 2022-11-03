@@ -1,3 +1,5 @@
+# sed
+
 !!! warning "Sed on Linux is not the same as sed on macOS!"
 
     One word of warning right away before you fall into the same pitfall as I did

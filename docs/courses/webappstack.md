@@ -2,17 +2,23 @@
 
 ## Goal
 
-This project's goal is to setup a local LAMP-Stack to be able to install a PHP/MySQL-based
-web application onto it. To learn a different aspects the following assumptions are made:
+This project's goal is to setup a local LAMP-Stack to be able to install a
+PHP/MySQL-based web application onto it. To learn a different aspects the
+following assumptions are made:
 
-* We pretend that the app will use quite some resources and therefore we need two linux servers:
-    * *webserver* will run the Apache webserver and listen to HTTP requests (80 first, 443 at a later stage)
-    * *dbserver* is running the Mariadb database server and act as the database backend for the webapp
+* We pretend that the app will use quite some resources and therefore we need
+  two linux servers:
+  * *webserver* will run the Apache webserver and listen to HTTP requests (80
+      first, 443 at a later stage)
+  * *dbserver* is running the Mariadb database server and act as the database
+      backend for the webapp
 * The webserver needs to provide PHP 8 to be able to run PHP-based webapplications
-* Communication to the Webserver is finally secured using SSL, which makes a x509-certificate necessary
+* Communication to the Webserver is finally secured using SSL, which makes a
+  x509-certificate necessary
 
-You are free to choose the webapplication that you want to deploy. There are many PHP-webapplications out
-there. A save choice might be a forum or a content management system, i.e. [Flarum], [phpBB], [Wordpress], ...
+You are free to choose the webapplication that you want to deploy. There are many
+PHP-webapplications out there. A save choice might be a forum or a content management
+system, i.e. [Flarum], [phpBB], [Wordpress], ...
 
 [Flarum]: https://flarum.org/
 [phpBB]: https://www.phpbb.com/
@@ -20,60 +26,72 @@ there. A save choice might be a forum or a content management system, i.e. [Flar
 
 ## Setup Local Virtual Servers
 
-As we setup the local severs with the help of vagrant, we will generate at least a Vagrantfile but for
-sure also scripts and the like. Therefore it's best to start off with a versioned project dir, always,
-and keep in mind to create commits based on steps we successfully carry out.
+As we setup the local severs with the help of vagrant, we will generate at least
+a Vagrantfile but for sure also scripts and the like. Therefore it's best to start
+off with a versioned project dir, always, and keep in mind to create commits based
+on steps we successfully carry out.
 
 !!! abstract "Project initialization and local server setup"
-    * Create a project dir
-    * Initialize an empty git repo (use `gh repo` for that and enjoy its convienience :smile:)
-    * Create the Vagrantfile
-      * Initialize a new Vagrantfile using the vagrant command
-      * Work with the rockylinux 8 basebox provided by geerlingguy (geerlingguy/rockylinux8)
-      * Configure 2 severs in this Vagrant file: webserver and dbserver
+    - Create a project dir
+    - Initialize an empty git repo (use `gh repo` for that and enjoy its
+      convienience :smile:)
+    - Create the Vagrantfile
+      - Initialize a new Vagrantfile using the vagrant command
+      - Work with the rockylinux 8 basebox provided by geerlingguy (geerlingguy/rockylinux8)
+      - Configure 2 severs in this Vagrant file: webserver and dbserver
 
-Consider that the two linux server have to communicate with each other and you want to connect to them from your browser and/or
-your CLI. Realize this using the private networking feature by adding an additional netowrk interface to the servers.
+Consider that the two linux server have to communicate with each other and you
+want to connect to them from your browser and/or your CLI. Realize this using
+the private networking feature by adding an additional netowrk interface to the servers.
 
-(Optional) If you want that the machines are reachable from everywhere via your host machine, you have to **forward ports 80
-and 443** of the guestOS to you laptop, good local ports on the host OS could be 8080 and 8443.
+(Optional) If you want that the machines are reachable from everywhere via your
+host machine, you have to **forward ports 80 and 443** of the guestOS to you laptop,
+good local ports on the host OS could be 8080 and 8443.
 
 ## Provision the Databse Server
 
 !!! abstract "Database server installation"
     1. **Install** the database server - either [MariaDB] or [MySQL] - using `dnf`
     1. **Configure** the database server using the ini files and
-        * set default charet to *utf8mb4*
-        * set default collation *utf8mb4_unicode_ci*
-    1. **Secure** the server for production use - try to figure out, which steps to carry out!
+        - set default charet to *utf8mb4*
+        - set default collation *utf8mb4_unicode_ci*
+    1. **Secure** the server for production use - try to figure out, which steps
+       to carry out!
 
 ??? success "Solutions - Databse server installation"
-    Please find my approach to the above tasks in the script [provision_dbserver.sh].  
-    Regarding the charset question set every aspect to charset `utf8mb4` and collation `utf8mb4_unicode_ci`, see
-    [my.cnf.d/charset.cnf]. For details of the configuration and the reasoning see [the guide on Charsets](../guides/misc.md).
+    Please find my approach to the above tasks in the script
+    [provision_dbserver.sh].  
+    Regarding the charset question set every aspect to charset `utf8mb4` and
+    collation `utf8mb4_unicode_ci`, see
+    [my.cnf.d/charset.cnf]. For details of the configuration and the reasoning
+    see [the guide on Charsets](../guides/misc.md).
 
-Is it working? Can you connect from the database server itself? Is it no longer possible to connect using user `root` with
-an empty password?
+Is it working? Can you connect from the database server itself? Is it no longer
+possible to connect using user `root` with an empty password?
 
 ??? success "Solution - Connecting from macOS"
-    First you need to install the mysql client binary. If you only want to connect to a remote DB server without having the
-    need for a local DB server on the host itself, you can safely just install the client package `mysql-client` - else install
-    `mariadb` that consists of the server and the client binaries.
+    First you need to install the mysql client binary. If you only want to connect
+    to a remote DB server without having the need for a local DB server on the
+    host itself, you can safely just install the client package `mysql-client`
+    - else install `mariadb` that consists of the server and the client binaries.
     ```bash
     brew install mysql-client
     # As it is keg only, either force linkng:
     brew link mysql-client -f
     # or add the bin path to your $PATH variable, i.e.:
     echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH"' >> ~/.bash_profile
+
     ```
-    Now you can connecto to the VMs using the mysql client binary. Use the IP address that you assigned in your `Vagrantfile`, in
+
+    Now you can connecto to the VMs using the mysql client binary. Use the IP
+    address that you assigned in your `Vagrantfile`, in
     my case:
     ```bash
     mysql -h 192.168.33.20 -u demouser -p
     ```
 
     !!! warning "(Optional task) Can you connect to the database server at the forwarded port from the host machine?"
-        Connecting won't work if you want to connec to the forwarded port 3306 on your host machine. MariaDB/MySQL on macOS/Linux
+        Connecting won't work if you want to connect to the forwarded port 3306 on your host machine. MariaDB/MySQL on macOS/Linux
         chooses to connect to a socket when connecting to `localhost` or when no server is specified. To connect using the TCP/IP
         protocol, you have to use an IP address. Don't forget to use the port that you actually used for port forwarding, in my
         case:
@@ -89,7 +107,8 @@ an empty password?
 ## Provision the Webserver
 
 !!! abstract "Installing PHP-8"
-    Next we want to be able to run web applications written in PHP. The latest available major version of PHP is version 8.
+    Next we want to be able to run web applications written in PHP. The latest
+    available major version of PHP is version 8.
 
     !!! warning "PHP-8 not available"
         Rocky Linux 8 comes with PHP version 7.2, 7.3 and 7.4, which might be too old for some PHP webapps. But PHP 8 is not
@@ -111,18 +130,20 @@ an empty password?
 
 ??? success "Solution - Installing Apache and PHP"
     Please find my approach to the above tasks in the script [provision_webserver.sh].
-    Upon installation you should be able to load the page at the IP you defined in the Vagrantfile, in my case at
-    <http://192.168.33.10/>. If you also forwarded the HTTP/HTTPS ports, then you can also load the same page at
-    <http://localhost:8080>.
+    Upon installation you should be able to load the page at the IP you defined
+    in the Vagrantfile, in my case at <http://192.168.33.10/>. If you also forwarded
+    the HTTP/HTTPS ports, then you can also load the same page at <http://localhost:8080>.
 
 [provision_webserver.sh]: https://github.com/mrolli/webappstack/blob/main/provision_webserver.sh
 
 ## Deploy an Application
 
-For the last step, there's no receipt that works for every application. There are as many installation procedures as there are
-applications out there, but still they share some archetypes:
+For the last step, there's no receipt that works for every application. There are
+as many installation procedures as there are applications out there, but still
+they share some archetypes:
 
-* Place the files to the DocumentRoot (of a VirtualServer directive), import an database dump file
+* Place the files to the DocumentRoot (of a VirtualServer directive), import the
+  database dump file
 * Unpack the projecct files to the DocumentRoot and run an installer on the CLI
 * Like above but run the installer by surfing to in the browser
 * Run a command at the CLi to initiate a project and answer some questions
@@ -132,6 +153,6 @@ applications out there, but still they share some archetypes:
     Consult the manual and thoroughly follow it step by step.
 
 !!! abstract "Final step"
-    Finally, when your application of choice is working, prove that it does. For a CMS
-    consider adding the sentence "Yes, I didi it" to the frontpage using the backend
-    editor. Send a screenshot by mail to me!
+    Finally, when your application of choice is working, prove that it does. For
+    a CMS consider adding the sentence "Yes, I didi it" to the frontpage using
+    the backend editor. Send a screenshot by mail to me!

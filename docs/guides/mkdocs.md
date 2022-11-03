@@ -37,7 +37,6 @@ Now its time to fire up a new projecct using `mkdocs:
     git add .
     git ci -m "Initial empty mkdocs project"
 
-
 The journey just started, best to continue the [getting started guide][1] of the
 material-mkdocs website.
 
@@ -45,12 +44,12 @@ The [reference guide][2] of material-mkdocs is a superb place to get an overview
 of possible style elements like admonitions, lists, formatting etc. and how to
 achieve them. Also look into the [cheatsheet][3] with all stuff in aciton.
 
-To publish the generated static pages, either deploy manually or setup a github action. This is
-on page [Publish your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/).
+To publish the generated static pages, either deploy manually or setup a github
+action. This is on page [Publish your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/).
 
 ## Further Reading
 
-- [Converting from/to markdown](http://www.tips.mostserio.us/cnvffmt/) 
+- [Converting from/to markdown](http://www.tips.mostserio.us/cnvffmt/)
 
 [1]: https://squidfunk.github.io/mkdocs-material/getting-started/
 [2]: https://squidfunk.github.io/mkdocs-material/reference/abbreviations/

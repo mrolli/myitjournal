@@ -1,5 +1,8 @@
-Please find here preserved knowledge that does not (yet) deserves its own page or is interdisciplanry so that it would fit
-in more that one place. This includes topics like...
+# Miscellaneous Interesting Stuff
+
+Please find here preserved knowledge that does not (yet) deserves its own page
+or is interdisciplanry so that it would fit in more that one place. This includes
+topics like...
 
 ## Charsets
 

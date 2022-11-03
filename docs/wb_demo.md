@@ -1,12 +1,14 @@
 # <small>KW32/21:</small> Ein Beispielwochenbericht
 
 !!! lb-work "Arbeitsablauf"
-    Hier den Arbeistablauf erfassen. In diesen "admnitions" kann **alles** eingefügt und formatiert werden, z.B. weitere adminition:
+    Hier den Arbeistablauf erfassen. In diesen "admnitions" kann **alles** eingefügt
+    und formatiert werden, z.B. weitere adminition:
     !!! warning "Hier aufgepasst"
         Sonst geht was schief.
     Oder auch code:
     ```bash
     echo "Hello World"
+
     ```
 
 !!! lb-media "Skizzen, Fotos, Bilder"

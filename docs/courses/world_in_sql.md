@@ -1,3 +1,5 @@
+# The World in SQL
+
 There are many relational databases out there and all of them have the **SQL - the
 Structured Query Language** - in common though different dialects exist. Knowing
 SQL at least on a basic to intermediate level is beneficial for the every day
@@ -50,7 +52,6 @@ ask for.
     - Which data do we know about a single country?
     - What do we know about a single city?
 
-
 Now that you have inspected the individual tables, it's time to investigate
 their relationships. From the real world we know that the world is composed
 from continents and the continents are divided in countries.  
@@ -59,7 +60,7 @@ sizes. Also people are talking different languages, sometimes more than one
 within the same country.
 
 !!! abstract "Exercise 2 - Relationships and ERD"
-    Try to draw an [Entity Relationship Diagram (ERD)][ERD] that shows all
+    Try to draw an [ERD] that shows all
     entities with some of their attributes especially those that are used to
     build relationships between the entities.
 
@@ -108,13 +109,12 @@ select flavors.
         - Nordic Countries
     - How many of the above are known to the database?
 
-
 ## Hints and Solutions
 
 ### Understanding the Database
 
 ??? hint "Hints ex 1 - What do we know about the world?"
-    These questions can be answered using [DESCRIBE] statement, [SHOW TABLES ]
+    These questions can be answered using [DESCRIBE] statement, [SHOW TABLES]
     statement or [SHOW COLUMNS] statement. Then examine the output carefully
     and try to figure out what data is stored in these columns.
     Bonus question: What is the difference between the [DESCRIBE] and [SHOW
@@ -127,8 +127,8 @@ select flavors.
         DESCRIBE countrylanguage;
         DESCRIBE city;
         SHOW COLUMNS FROM city;
-        ```
 
+        ```
 
 ??? hint "Hints ex 2 - Relationships and ERD"
     An entity relationship diagram show things with the attributes and the
@@ -174,7 +174,7 @@ select flavors.
 ??? hint "Hints ex 3 - Countries in the world"
     - To answer the first exercise select only the columns name and country code
     - For the second question you have to use the [COUNT] function.
-    - To answer the last question you have to narfrow down the results using a
+    - To answer the last question you have to narrow down the results using a
     [WHERE] clause with a [LIKE] operator
     ??? hint "Solution"
         ```sql
@@ -182,12 +182,13 @@ select flavors.
         SELECT count(Code) FROM country;
         SELECT Name FROM country WHERE Name like 'M%';
         SELECT Population FROM country WHERE Name = 'Switzerland';
+
         ```
 
 ??? hint "Hints ex 4 - Relationships, anyone?"
-    Both attributes are not normalized, which means their string values occurr
+    Both attributes are not normalized, which means their string values occur
     multiple times in the column. When adding new country there's a chance for
-    typos, i.e. 'Europ' instead of 'Europe' and this country would then not bei on
+    typos, i.e. 'Europe' instead of 'Europe' and this country would then not be on
     the content. Therefore we would normally normalize both to their own tables
     and add primary and foreign key to reference the data. Can you come up with
     a solution for a fully normalized country, region, continent relationship?
@@ -210,6 +211,7 @@ select flavors.
                 int Region FK "The identifier to the Region"
             }
             REGION ||--|{ COUNTRY : has
+
         ```
 
 ??? hint "Hints ex 5 - From continents and regions"
@@ -220,12 +222,14 @@ select flavors.
     least two. One of them should use the given regions and state that the
     countries should not be in these regions.
     ??? hint "Solution"
+        <!-- markdownlint-disable -->
         ```sql
             SELECT DISTINCT Continent, Region FROM country ORDER BY Continent, Region;
             SELECT Name, Region FROM country WHERE Continent='Europe' AND Region NOT IN ('Western Europe', 'British Islands', 'Nordic Countries');
             a) SELECT count(Name) FROM country WHERE Continent='Europe' AND Region NOT IN ('Western Europe', 'British Islands', 'Nordic Countries');
             b) SELECT count(Name) FROM country WHERE Continent='Europe' AND (Region = 'Baltic Countries' OR Region = 'Southern Europe' OR Region = 'Eastern Europe');
         ```
+        <!-- markdownlint-restore -->
         !!! warning ""
             The WHERE clause "Continent='Europe'" is not necessary as
             the selected regions are in Europe anyway.  
@@ -235,13 +239,13 @@ select flavors.
 ??? hint "Hints ex X"
     ??? hint "Solution"
         ```sql
+
         ```
 
+<!-- markdownlint-disable -->
 [COUNT]: https://mariadb.com/kb/en/count/
 [DESCRIBE]: https://mariadb.com/kb/en/describe/
-<!-- [LIKE]: https://www.w3schools.blog/like-operator-mariadb -->
 [LIKE]: https://mariadb.com/kb/en/like/
-<!-- [WHERE]: https://www.w3schools.blog/where-clause-mariadb -->
 [SELECT]: https://mariadb.com/kb/en/select/
 [SHOW COLUMNS]: https://mariadb.com/kb/en/show-columns/
 [SHOW TABLES]: https://mariadb.com/kb/en/show-tables/
