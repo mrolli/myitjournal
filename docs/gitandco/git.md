@@ -53,14 +53,17 @@ the top level of the repo itself.
 Unsure what your identity is in the current repo? Just run `git config
 user.name` or `git config user.email` respectively.
 
-### Repo-local configs
+### Repo-local Configuration Files
 
-#### *gitignore* - Specifies intentionally untracked files to ignore
+#### `.gitignore` - Specifies intentionally untracked files to ignore
 
 A gitignore file specifies intentionally untracked files that Git should ignore,
 see [man gitignore](https://git-scm.com/docs/gitignore) or in the [git-book](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring).
+This is valuable if you have some local temporary files, that should not get
+committed except if forced. Other examples may include a vendor library that is
+used that is versioned somewhere else and gets installed as a dependency.
 
-#### *gitattributes* - Defining attributes per path
+#### `.gitattributes` - Defining attributes per path
 
 A gitattributes file is a simple text file that gives attributes to pathnames,
 i.e. end of line style, see [man gitattributes](https://git-scm.com/docs/gitattributes)
