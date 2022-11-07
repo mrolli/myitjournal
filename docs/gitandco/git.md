@@ -47,7 +47,7 @@ the repo directory by issuing:
     git config user.email max.mustermann@example.com
 
 As you can see, the same command is run, but `--global` is left out. Now this
-local setting can be found in the config file of the repo, see `.gitconfig` at
+local setting can be found in the config file of the repo, see `.git/config` at
 the top level of the repo itself.
 
 Unsure what your identity is in the current repo? Just run `git config
