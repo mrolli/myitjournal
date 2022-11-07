@@ -34,7 +34,7 @@ files and options are mentioned here, there
 
 This step is really important as you set some default behaviour and especially
 you have to set your identity! This last step - configuring your identity - is
-neglected very often. Please, don't. No go and read [first time git
+neglected very often. Please, don't. Now go and read [first time git
 setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
 Keep in mind that you just set your global identity. Almost every configuration
@@ -43,11 +43,11 @@ be "MrCool <cool@test.com>", you can still have another identity on a per repo
 basis, i.e. when implementing stuff for work. You can set your identity within
 the repo directory by issuing:
 
-    git config user.name  Max Mustermann
+    git config user.name  "Max Mustermann"
     git config user.email max.mustermann@example.com
 
-As you can see, the same commando is run, but `--global` is left out. Now this
-local setting can be found in the config file of the repo, see `.git/config` at
+As you can see, the same command is run, but `--global` is left out. Now this
+local setting can be found in the config file of the repo, see `.gitconfig` at
 the top level of the repo itself.
 
 Unsure what your identity is in the current repo? Just run `git config
