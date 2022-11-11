@@ -17,19 +17,20 @@ resources is provided here:
 - [GitHub Training Lab](https://lab.github.com/)
 - [Visualizing Git](https://git-school.github.io/visualizing-git/)
 
-## (Git) Workflows
+## GitHub flow
 
-When working in teams there are many possible workflows to work on a project all
-at the same minimizing the changes of conflicts. Hosting the repo at GitHub
-however should motivate you to incorporate the GitHub flow as it has proven to
-be a very easy workflow that a whole lot of projects are using. Take a look into
-[guide on GitHub flow][gh-flow].
+While there are [many git workflows](gitworkflows.md) out there, having your
+repository on GitHub make the [GitHub Flow][gh-flow] your first choice. As
+explained on the [git workflows](gitworkflows.md) page, it's simple even for
+bigger teams. The documentation on the Github flow primarily explains it from
+technical point of view. The follow section workflow embeds these steps in an
+example change.
 
-### Example Workflow The philosophy of mine is that every change should be
+### Complete Example Workflow
 
-documented from the beginning to the end when it's implemented. A change could
-be a bug and its fix or a new feature that is required and gets implemented. The
-order of action then is:
+My philosophy is that every change should be documented from the beginning
+to the end when it's implemented. A change could be a bug and its fix or a new
+feature that is required and gets implemented. The order of action then is:
 
 1. Open a ticket and describe the bug/feature in several dimensions to make it
    possible to understand the need to change something. Key questions are:
@@ -49,18 +50,6 @@ order of action then is:
 1. Merge the feature branch back into the `main` branch
 1. Delete the feature branch locally and remote
 1. Get yourself a :beer: or move to the next ticket
-
-**List of popular workflows**
-
-- [GitHub flow][gh-flow]
-- [A successful Git branching model AKA git-flow](https://medium.com/singlestone/a-git-workflow-using-rebase-1b1210de83e5)
-- [Git workflow using rebase](https://medium.com/singlestone/a-git-workflow-using-rebase-1b1210de83e5)
-
-Keep in mind to use a workflow that is as simple as possible. Do not overly
-complicate collaboration if it's no needed. The git-flow workflow is very
-powerful but comes with a certain complexity and therefore too much of a hassle
-for most projects we do. For these projects the [GitHub flow][gh-flow] is much
-more reasonable and by far easier to understand and live.
 
 ## GitHub Actions
 

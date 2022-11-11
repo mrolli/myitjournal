@@ -4,7 +4,7 @@
 
 The following three videos by David Mahler are a decent introduction to Git
 version control system and teach you the key concepts of Git in a illustrative
-way. Runtime is 30m each for total for 1.5h. I wish I started to learn Git this
+way. Runtime is 30m each for a total of 1.5h. I wish I started to learn Git this
 way back then. :stuck_out_tongue_winking_eye:
 
 <!-- markdownlint-disable -->
@@ -34,8 +34,8 @@ files and options are mentioned here, there
 
 This step is really important as you set some default behaviour and especially
 you have to set your identity! This last step - configuring your identity - is
-neglected very often. Please, don't. Now go and read [first time git
-setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+neglected very often. Please, don't. **Now go and read [first time git
+setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)!**
 
 Keep in mind that you just set your global identity. Almost every configuration
 key is also changeable on repo level. This means while your global identity may
@@ -47,8 +47,8 @@ the repo directory by issuing:
     git config user.email max.mustermann@example.com
 
 As you can see, the same command is run, but `--global` is left out. Now this
-local setting can be found in the config file of the repo, see `.git/config` at
-the top level of the repo itself.
+local setting can be found in the config file of the repo, `.git/config`. While
+the global configuration file is found at `~/.gitconfig`.
 
 Unsure what your identity is in the current repo? Just run `git config
 user.name` or `git config user.email` respectively.
@@ -86,28 +86,3 @@ almost never teach you), e.g. `--patch` or `-p`
 Try the following form of adding files to the index next you have to do that and
 see what happens!  
 `git add --patch somepathspec` or `git add -p somepathspec`
-
-### [A successful Git branching model][gitflow] <small>(20' read)</small>
-
-This article is the original article from 2010 that introduced/presented the
-Git-flow workflow for managing the code for software projects. This is quite a
-complex workflow featuring the master and develop branches as the permanent
-branches and the branch types feature branch, release branch and hotfix branch
-based on the needs. The articles demonstrates a lot of brain work done about
-handling different situations and how to solve issues. **Please read the author's
-reflection at the top and keep it in mind! While this is a proven Git branching
-strategy it is quite complex and for many situations and projects a complete
-overkill.**  
-Make yourself familiar with other Git branch strategies like the
-[Github Flow][ghflow] or the [Gitlab Flow][glflow] and then choose the simplest
-that is still satisfying your real needs (not the nice to haves). Best use
-something that others in your team are already familiar and successful with!
-
-There's a good [comparison of git branching strategies][gbstrats]
-over at flaghsip.io. You should least know the principles, pros/cons and
-differences between these four strategies.
-
-[gitflow]: https://nvie.com/posts/a-successful-git-branching-model/
-[ghflow]: https://githubflow.github.io/
-[glflow]: https://docs.gitlab.com/ee/topics/gitlab_flow.html
-[gbstrats]: https://www.flagship.io/git-branching-strategies/

@@ -113,6 +113,7 @@ nav:
   - "Git/GitHub":
       - "Git":
           - "Learning Git": gitandco/git.md
+          - "Git Workflows": gitandco/gitworkflows.md
           - "Git Recipes": gitandco/gitrecipes.md
       - "Github": gitandco/github.md
   - "MdCheat": mdcheat.md
