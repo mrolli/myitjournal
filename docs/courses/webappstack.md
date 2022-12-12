@@ -42,10 +42,10 @@ on steps we successfully carry out.
 
 Consider that the two linux server have to communicate with each other and you
 want to connect to them from your browser and/or your CLI. Realize this using
-the private networking feature by adding an additional netowrk interface to the servers.
-
-(Optional) If you want that the machines are reachable from everywhere via your
-host machine, you have to **forward ports 80 and 443** of the guestOS to you laptop,
+the private networking feature (type internal networking) by adding an additional
+network interface to the servers.
+In addition you want to be able to consume the webiste from your host machine,
+therefore, you have to **forward ports 80 and 443** of the guestOS to your laptop,
 good local ports on the host OS could be 8080 and 8443.
 
 ## Provision the Databse Server
@@ -57,6 +57,8 @@ good local ports on the host OS could be 8080 and 8443.
         - set default collation *utf8mb4_unicode_ci*
     1. **Secure** the server for production use - try to figure out, which steps
        to carry out!
+    1. (optional): To be able to connect from your host system to your dbserver,
+       you have to forward port 3306 to your host, i.e. to port 8306.
 
 ??? success "Solutions - Databse server installation"
     Please find my approach to the above tasks in the script
@@ -69,7 +71,7 @@ good local ports on the host OS could be 8080 and 8443.
 Is it working? Can you connect from the database server itself? Is it no longer
 possible to connect using user `root` with an empty password?
 
-??? success "Solution - Connecting from macOS"
+??? success "Solution - Connecting from host system to dbserver"
     First you need to install the mysql client binary. If you only want to connect
     to a remote DB server without having the need for a local DB server on the
     host itself, you can safely just install the client package `mysql-client`
@@ -83,14 +85,16 @@ possible to connect using user `root` with an empty password?
 
     ```
 
-    Now you can connecto to the VMs using the mysql client binary. Use the IP
+    Now you can connec to to the VMs using the mysql client binary. Use the IP
     address that you assigned in your `Vagrantfile`, in
     my case:
     ```bash
-    mysql -h 192.168.33.20 -u demouser -p
+    mysql -h localhost -u demouser -p
     ```
 
-    !!! warning "(Optional task) Can you connect to the database server at the forwarded port from the host machine?"
+    Does it work?
+
+    !!! warning "Help, connecting to localhost does not work!"
         Connecting won't work if you want to connect to the forwarded port 3306 on your host machine. MariaDB/MySQL on macOS/Linux
         chooses to connect to a socket when connecting to `localhost` or when no server is specified. To connect using the TCP/IP
         protocol, you have to use an IP address. Don't forget to use the port that you actually used for port forwarding, in my
