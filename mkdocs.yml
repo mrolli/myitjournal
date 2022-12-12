@@ -100,8 +100,9 @@ nav:
   - "Guides":
       - "Ansible": guides/ansible.md
       - "Homebrew": guides/homebrew.md
-      - "Miniconda": guides/miniconda.md
+      - "macOS FAQs": guides/macos_faq.md
       - "Mnemonics": guides/mnemonics.md
+      - "Miniconda": guides/miniconda.md
       - "MkDocs": guides/mkdocs.md
       - "Neovim": guides/neovim.md
       - "tmux": guides/tmux.md
