@@ -12,3 +12,12 @@ several Linux Distributions so far, such as (from latest to earliest):
 - Ubuntu 10.04 - 14.04
 - Fedora Core 3
 - SuSE Linux 6.3 - 8.1
+
+## IT Quotes
+
+"There are only two hard things in computer science: cache invalidation and
+naming things."  
+-- Phil Karlton
+
+"The earlier you catch defects, the cheaper they are to fix."  
+-- David Farley
