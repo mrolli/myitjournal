@@ -66,6 +66,10 @@ There's good [cheat sheet from GitGuardian](../pdf/RewritingYourGitHistory-Cheat
 that features a flow chart on how to proceed and save the situation depending on
 the stage at which you realised that something wrong happened.
 
+In addition, go and study the page ["Removig sensitive data from a
+repository"](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
+in the GitHub Documenation.
+
 ## Damn, I branched off wrong parent branch!
 
 **Symptom**
