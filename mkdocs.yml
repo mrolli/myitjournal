@@ -57,6 +57,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
+  - footnotes
   - pymdownx.betterem
   - pymdownx.critic
   - pymdownx.details
@@ -108,8 +109,9 @@ nav:
       - "tmux": guides/tmux.md
       - "Vagrant": guides/vagrant.md
       - "Vim": guides/vim.md
-      - "Unix Commands":
-          - "Sed": guides/unix/sed.md
+      - "Shell Scripting":
+          - "Bash Heredoc": guides/scripting/bash_heredoc.md
+          - "Sed": guides/scripting/sed.md
       - "Miscellaneous": guides/misc.md
   - "Git/GitHub":
       - "Git":
