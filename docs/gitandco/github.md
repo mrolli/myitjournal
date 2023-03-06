@@ -26,30 +26,58 @@ bigger teams. The documentation on the Github flow primarily explains it from
 technical point of view. The follow section workflow embeds these steps in an
 example change.
 
-### Complete Example Workflow
+### Complete Workflow
 
 My philosophy is that every change should be documented from the beginning
 to the end when it's implemented. A change could be a bug and its fix or a new
 feature that is required and gets implemented. The order of action then is:
 
-1. Open a ticket and describe the bug/feature in several dimensions to make it
-   possible to understand the need to change something. Key questions are:
-    - What is broken?
-    - How does the error present itself?
-    - What are error messages that occur?
-    - What feature is missing?
-    - Which are the requirements that make the changes necessary?
-1. Checkout a new branch that addresses this issue and implement the changes on
-   this branch? Name the branch accordingly,
-    i.e. `issue31`, `featureXY`, ...
-1. Make changes and commits to this feature branch
-1. (optional): Cleanup the branch by rewording, squashing, rearranging commits
-   using  `git rebase --interactive`
-1. Push your changes to origin
-1. Prepare a pull request and optionally ask someone else to review the changes
-1. Merge the feature branch back into the `main` branch
-1. Delete the feature branch locally and remote
-1. Get yourself a :beer: or move to the next ticket
+```mermaid
+sequenceDiagram
+    autonumber
+    participant L as LocalRepo
+    participant G as GitHub (GH)
+    L->>G: Create an issue (bug, feature, ...)
+    activate L
+    L->>L: Create a feature branch (FB)
+    loop work_on_issue
+        L->>L: Change code and create a commit
+        L-->>G: (optionally) Push FB to GH
+    end
+    Note right of L: When work is finally done
+    L->>L: Cleanup your FB
+    L->>G: Push FB to GH
+    deactivate L
+    activate G
+    G->>G: Create a pull request (PR)
+    G->>G: (ideally): Let somebody review your PR
+    G->>G: Merge PR
+    deactivate G
+    activate L
+    G->>L: Pull latest changes on main
+    L->>L: Delete local FB
+    L->>G: Delete remote FB
+    deactivate L
+```
+
+#### Comments on above diagram
+
+1) Describe the bug/feature in several dimensions to make it possible to understand
+the need to change something. Key questions are:
+
+- What is broken?
+- How does the error present itself?
+- What are error messages that occur?
+- What feature is missing?
+- Which are the requirements that make the changes necessary?
+
+<!-- markdownlint-disable MD029 -->
+2) Name the branch accordingly i.e. `issue31`, `featureXY`, ...  
+5) Cleanup the branch if needed by rewording, squashing, rearranging commits
+   using  `git rebase --interactive` in order to have a history that makes
+   sense.  
+12) Get yourself a :beer: or move to the next ticket
+<!-- markdownlint-restore -->
 
 ## GitHub Actions
 
