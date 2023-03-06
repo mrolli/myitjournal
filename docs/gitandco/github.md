@@ -68,6 +68,27 @@ No need to switch app, enter URLs, click through to the destination page you
 need, just to open a new PR. All can be done in your Bash. See it [in
 action][gh-cli].
 
+The above illustrated workflow done using the tool `gh` might look as follos:
+
+```bash
+gh issue create --title "Thing X fails to compile" --assignee "@me" --label "bug" \
+                --body "some longer text to sufficiently describe the bug"
+gh checkout main
+gh checkout -b bug_compile_error_in_X
+# work on file
+git add fileX
+git ci -m "Fix compilation error"
+git push origin bug_compile_error_in_X
+gh pr create -t "The bug is fixed" -b "Everything works again"
+gh pr merge
+git checkout main
+git pull origin main
+git branch -d bug_compile_error_in_X
+```
+
+`gh` comes with an excellent [documentation](https://cli.github.com/manual/) and
+local help, see `gh --help`.
+
 ## Community Health Files
 
 TBD
