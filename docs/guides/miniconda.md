@@ -54,7 +54,7 @@ based on specifications found in a YAML file.
     EOD
     # the -f option can even be ommitted if the environment file is named
     # environment.yaml and is found within current workig directory
-    conda create [-f environment.yml]
+    conda env create [-f environment.yml]
     ```
 
 !!! tip "Add environment.yml to git repo"
