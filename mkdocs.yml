@@ -106,12 +106,13 @@ nav:
       - "Miniconda": guides/miniconda.md
       - "MkDocs": guides/mkdocs.md
       - "Neovim": guides/neovim.md
-      - "tmux": guides/tmux.md
-      - "Vagrant": guides/vagrant.md
-      - "Vim": guides/vim.md
       - "Shell Scripting":
           - "Bash Heredoc": guides/scripting/bash_heredoc.md
           - "Sed": guides/scripting/sed.md
+      - "tmux": guides/tmux.md
+      - "Vagrant": guides/vagrant.md
+      - "Vim": guides/vim.md
+      - "Zsh": guides/zsh.md
       - "Miscellaneous": guides/misc.md
   - "Git/GitHub":
       - "Git":
