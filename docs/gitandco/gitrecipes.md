@@ -191,3 +191,43 @@ I want all the old commits where these files were referenced in the new repo too
             git push origin main
             ```
         You're done. [Original source](https://stackoverflow.com/questions/359424/detach-move-subdirectory-into-separate-git-repository)
+
+## Import a Repository (Into a Subfolder of) Another Repository
+
+**Symptom**
+
+You have a lot of repositories that you often deploy together or changes to one
+directory almost always require changes to another repo? Then it might be
+beneficial to import one repository into the other.
+
+**Discussion and Solution**
+
+Again, it turns out that also this use case is quite easy to achieve with a simple
+merge after adding the to be included repository as a remote and then fetching
+the branch to merge. Cleanup the branch before and then merge. The whole history
+is imported.
+
+!!! success "Solution"
+
+    If you want to merge the main branch of project-a into HEAD of project-b:
+
+    ```
+    cd path/to/project-b
+    git remote add project-a /path/to/project-a
+    git fetch project-a --tags
+    git merge --allow-unrelated-histories project-a/main # or whichever branch you want to merge
+    git remote remove project-a
+    ```
+
+    In case you want to put project-a into a subdirectory, you can use [`git-filter-repo`](https://github.com/newren/git-filter-repo)
+    (filter-branch is discouraged). Run the following commands before the commands
+    above:
+
+    ```
+    cd path/to/project-a
+    # Optionally checkout a new branch and make changes if needed
+    # The use filter-repo as advised:
+    git filter-repo --to-subdirectory-filter project-a
+    ```
+
+    Now is also a good moment to clenaup the history of the branch you want to import.
