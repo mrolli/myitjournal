@@ -68,6 +68,16 @@ that teaches Vim.
 
 [![How to Do 90% of What Plugins Do (With Just Vim)](http://img.youtube.com/vi/XA2WjJbmmoM/0.jpg)](http://www.youtube.com/watch?v=XA2WjJbmmoM/)
 
+## In vim, how do I...
+
+### replace line breaks?
+
+As a command, type
+
+    :%s/^M$//
+
+(To get ^M, press ^V ^M, where ^ is CTRL on most keyboards)
+
 ## Suggested Plugins
 
 ### General Plugins
