@@ -3,9 +3,10 @@
 I finally switched from Bash to Zsh too on my desktop machines. You can consult
 my configuration in my [dotfiles](https://github.com/mrolli/dotfiles/tree/main/config/zsh).
 
-## Command Completion
+## Various Articles Worth Reading
 
 - [A Guide to the Zsh Completion with Examples](https://thevaluable.dev/zsh-completion-guide-examples/)
+- [How to profile your zsh startup time](https://esham.io/2018/02/zsh-profiling)
 
 ## Using colors in Scripts
 
