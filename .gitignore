@@ -1,7 +1,6 @@
+ansible_workspace/.vagrant/
+ansible_workspace/collections/*
+ansible_workspace/roles/*
 site/
-.vagrant/
-collections/*
-roles/*
 tmp/
 temp/
-.DS_Store
