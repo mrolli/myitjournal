@@ -5,7 +5,8 @@ dependencies:
   - pip
   - pip:
       - mkdocs-material
-      - mkdocs-git-revision-date-plugin
+      - mkdocs-git-revision-date-localized-plugin
+      - mkdocs-git-authors-plugin
       - ansible
       - ansible-lint
       - argcomplete

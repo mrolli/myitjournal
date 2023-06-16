@@ -50,7 +50,7 @@ theme:
     - toc.follow
 
 plugins:
-  - git-revision-date
+  - git-revision-date-localized
   - search
 
 markdown_extensions:
