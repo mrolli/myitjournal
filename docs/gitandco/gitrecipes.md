@@ -113,7 +113,7 @@ That’s it. Right now we have our current-feature-branch branch based on master
 branch, not like before based on feature-branch.
 
 In the end, I would like to say two more things here. First, the general form -
-rebase some branch from one branch onto another looks like this:
+rebase some branch from one branch onto another - looks like this:
 
 !!! success "Solution"
     ```bash
