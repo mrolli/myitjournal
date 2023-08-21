@@ -20,6 +20,7 @@ documentation as the one source of truth as reference.
 * [Git Reference](https://git-scm.com/docs)
 * [Pro Git Book](https://git-scm.com/book/en/v2)
 * [A Visual Git Reference](https://git-scm.com/docs)
+* [An interactive Git course](https://learngitbranching.js.org/)
 * [Visualizing Git](https://git-school.github.io/visualizing-git/)
 
 ## Configuration files
