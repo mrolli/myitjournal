@@ -76,7 +76,47 @@ As a command, type
 
     :%s/^M$//
 
-(To get ^M, press ^V ^M, where ^ is CTRL on most keyboards)
+To get ^M, press ++ctrl+v++ followd by ++ctrl+m++
+
+### search and replace over all project files
+
+This recipe is copied and condensed from [jdhao's blog](https://jdhao.github.io/2020/03/14/nvim_search_replace_multiple_file/).
+
+We can use `vimgrep` command to populate the Vim quickfix list with files
+matching our specific pattern. The `cfdo` command can then be utilized to
+perform replacement operation for each file in the quickfix list.
+
+#### vimgrep
+
+To find all files containing Neovim under current directory using `vimgrep`, we
+can use the following the command:
+
+    :vimgrep /Neovim/gj **/*
+
+In the above command, Neovim is our search pattern. The meanings of g and j
+flags are as follows:
+
+* g: Add all matches in a line to the quickfix list.
+* j: Do not jump the cursor to the location of first pattern match.
+
+The `**/*` specify the files to search for the pattern. In this case, it means
+to search recursively under the current directory and for all files types. You
+can also search only in certain files types by adding a file type to the search
+pattern.
+
+After this step, the quickfix will be populated with the matching files, lines
+and column number (use `copen` to open the quickfix list):
+
+#### cfdo
+
+After the quickfix list is filled with files containing the search pattern, we
+now use `cfdo` command to perform replace operation on each file:
+
+    :cfdo %s/Neovim/Nvim/ge | update
+
+The `cfdo` command can be followed by one command or a series of commands
+(separated by `|`). In the above example, we first perform substitution, then
+followed by update command so that the replacement change is saved.
 
 ## Suggested Plugins
 
