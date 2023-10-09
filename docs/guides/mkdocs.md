@@ -53,4 +53,4 @@ action. This is on page [Publish your site](https://squidfunk.github.io/mkdocs-m
 
 [1]: https://squidfunk.github.io/mkdocs-material/getting-started/
 [2]: https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
-[3]: ../../mdcheat/
+[3]: ../mdcheat.md
