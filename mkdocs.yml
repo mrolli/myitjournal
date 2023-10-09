@@ -101,6 +101,7 @@ nav:
       - "The World in SQL": courses/world_in_sql.md
   - "Guides":
       - "Ansible": guides/ansible.md
+      - "Certificates with OpenSSL": guides/certificates.md
       - "Homebrew": guides/homebrew.md
       - "macOS FAQs": guides/macos_faq.md
       - "Mnemonics": guides/mnemonics.md
