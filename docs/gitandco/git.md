@@ -23,6 +23,13 @@ documentation as the one source of truth as reference.
 * [An interactive Git course](https://learngitbranching.js.org/)
 * [Visualizing Git](https://git-school.github.io/visualizing-git/)
 
+## Areas in a Git Repository
+
+This diagram illustrates the different areas in a git repo and which
+subcommands to use to manage changes between these buckets:
+
+![Git areas](../img/gitbuckets.jpg)
+
 ## Configuration files
 
 There are a number of configuration files that git offers and that let user
