@@ -123,5 +123,7 @@ nav:
           - "Git Workflows": gitandco/gitworkflows.md
           - "Git Recipes": gitandco/gitrecipes.md
       - "Github": gitandco/github.md
+  - "Azure":
+      - "Decision Trees": azure/decision_trees.md
   - "MdCheat": mdcheat.md
   - About Me: about.md
