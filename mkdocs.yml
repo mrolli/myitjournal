@@ -13,7 +13,7 @@ repo_url: https://github.com/mrolli/myitjournal
 edit_uri: "edit/main/docs"
 
 # Copyright
-copyright: "Copyright &copy; 2021 Michael Rolli<br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>."
+copyright: 'Copyright &copy; 2021 Michael Rolli<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.'
 
 # Configuration
 theme:
@@ -63,8 +63,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.keys
   - pymdownx.snippets:
       auto_append:
