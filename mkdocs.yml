@@ -125,5 +125,7 @@ nav:
       - "Github": gitandco/github.md
   - "Azure":
       - "Decision Trees": azure/decision_trees.md
+      - "FAQ": azure/faq.md
+      - "Bookmarks": azure/linklist.md
   - "MdCheat": mdcheat.md
   - About Me: about.md

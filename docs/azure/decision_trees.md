@@ -18,6 +18,13 @@ for more details.
 
 ![Azure Data Store Decision Tree](../img/az-data-store-decision-tree.png){ loading=lazy }
 
+## Choose a load balancing service
+
+Use the following decision tree to help you choose the load balancing service
+for your workloads, see [Load-balancing options](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/load-balancing-overview?toc=%2Fazure%2Ffrontdoor%2Ftoc.json)
+
+![Load-balancing in Azure Decision Tree](../img/az-load-balancing-decision-tree.png){ loading=lazy }
+
 ## Architectural Styles
 
 The following list shows a set of architectural styles commonly found in cloud
