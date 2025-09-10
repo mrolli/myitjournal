@@ -7,6 +7,8 @@ Find below valuable direct links into Microsoft Learn.
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
 - [Make Technology Choices for Azure Solutions](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/technology-choices-overview)
 - [Application Landing Zone Architectures](https://learn.microsoft.com/en-us/azure/architecture/landing-zones/landing-zone-deploy#application-landing-zone-architectures)
+- [Product Availablility By Region](https://azure.microsoft.com/de-de/explore/global-infrastructure/products-by-region/table)
+- [Microsoft Datacenters Explorer](https://datacenters.microsoft.com/globe/explore)
 
 ## Cloud Adoption Framework
 
