@@ -127,5 +127,7 @@ nav:
       - "Decision Trees": azure/decision_trees.md
       - "FAQ": azure/faq.md
       - "Bookmarks": azure/linklist.md
+  - "Plesk":
+    - "Useful Commands": plesk/useful_cli_commands.md
   - "MdCheat": mdcheat.md
   - About Me: about.md
