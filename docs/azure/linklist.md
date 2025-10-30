@@ -12,7 +12,7 @@ Find below valuable direct links into Microsoft Learn.
 
 ## Cloud Adoption Framework
 
-- [Common subscirption vending product lines](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zones/subscription-vending-products
+- [Common subscription vending product lines](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending-product-lines)
 - [Infrastructure as Code (IaC)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code)
 
 ## Networking
@@ -23,6 +23,7 @@ Find below valuable direct links into Microsoft Learn.
 ## Infrastructure as Code (IaC)
 
 - [Terraform on Azure](https://learn.microsoft.com/en-us/azure/developer/terraform/)
+- [Using GitHub Actions Workload identity federation (OIDC) with Azure for Terraoform deployments](https://learn.microsoft.com/en-us/samples/azure-samples/github-terraform-oidc-ci-cd/github-terraform-oidc-ci-cd/)
 
 ### Services
 
