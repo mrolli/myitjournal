@@ -34,3 +34,15 @@ not in $you-name-it>. Just! In! Terminal.app! Weird, isn't it?
 By the way, `com.apple.provenance` is a new extended attribute mark files that
 where quarantined but you choose to allowlist them. So this marks them has
 having been quarantined. It has been introduced with Ventura.
+
+## Fix error "defaults[2687:40597] Could not write domain..."
+
+So, you are trying to set some options using `defaults write ...` and you get
+the mentioned error message, i.e. when setting the theme for Apple Mail using
+`defaults write com.apple.Mail NSRequiresAquaSystemAppearance -bool true`.
+
+You'll need to temporarily give the terminal full disk access, otherwise you'll
+see an error about writing domain. You can grant the terminal full disk access
+by going to `System Preferences -> Privacy & Security -> Full Disk access`.  
+You might want to revoke full disk access after making the updates to maintain os
+security.
