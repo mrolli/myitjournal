@@ -94,3 +94,23 @@ almost never teach you), e.g. `--patch` or `-p`
 Try the following form of adding files to the index next you have to do that and
 see what happens!  
 `git add --patch somepathspec` or `git add -p somepathspec`
+
+## git checkout vs. git switch / git restore
+
+Git 2.23 introduced two new commands: `git switch` and `git restore`. The reason
+is clarity as `git checkout` worked with branches and files likeways and `git`
+had to guess what you want. Does `git checkout project_start` actually checkout
+the branch `project_start` or do you want to undo all changes to the file
+`project_start`?
+
+Here's what to use now:
+
+| Action                        | Old Command                    | New Command                            |
+| ----------------------------- | ------------------------------ | -------------------------------------- |
+| Switch to a branch            | `git checkout branch-name`     | `git switch branch-name`               |
+| Create and switch to a branch | `git checkout -b new-branch`   | `git switch -c new-branch`             |
+| Restore file changes          | `git checkout -- file.txt`     | `git restore file.txt`                 |
+| Restore file from commit      | `git checkout HEAD~1 file.txt` | `git restore --source=HEAD~1 file.txt` |
+| Unstage a file                | `git reset HEAD file.txt`      | `git restore --staged file.txt`        |
+
+Simple and clear now.
