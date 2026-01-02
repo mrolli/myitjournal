@@ -10,4 +10,4 @@
     `gnu-sed` using Homebrew and then use gsed instead of sed or make your
     scripts platform-aware and build the commmands accordingly.
 
-[Burce Barnett: Intro and Tutorial to Sed](https://www.grymoire.com/Unix/Sed.html)
+[Bruce Barnett: Intro and Tutorial to Sed](https://www.grymoire.com/Unix/Sed.html)
