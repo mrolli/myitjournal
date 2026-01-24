@@ -118,7 +118,27 @@ done
 if ($host ~ ^www\.(.+)$) {
     return 301 $scheme://$1$request_uri;
 }
+```
 
+### How to update the "Additional Nginx/Apache directives" field of all/several
+
+domains in Plesk
+
+Domain's additional Nginx/Apache directives are saved in files located in `/var/www/vhosts/system/$fqdn/conf/`:
+
+- `vhost_nginx.conf`: Additional Nginx directives
+- `vhost_ssl.conf`: Additional Apache directives for HTTPS
+- `vhost.conf`: Additional Apache directives for HTTP
+
+Just overwrite the files needed. Then, the subdomain/domain needs to be
+reconfigured and the respective webserver needs a reload of its config:
+
+```bash
+for domain in sub.example.org sub-r.example.org; do
+  install directive_template.conf -o root -g nginx -m 600 "/var/www/vhosts/system/${domain}/conf/vhost_nginx.conf"
+  plesk sbin httpdmng --reconfigure-domain "${domain}" -no-restart
+done
+service nginx reload
 ```
 
 ## Maintenance Tasks
