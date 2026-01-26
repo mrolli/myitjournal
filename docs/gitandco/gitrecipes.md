@@ -51,7 +51,21 @@ need to:
 This command first fetches the latest commits and then rebases your commits on
 top of the latest commit, see `git help pull`. Now you may try to push your changes.
 
-## Damn, I committed a secret!
+## Replace a file with its version on other branch
+
+To replace the content of a file `testfile.txt` with the content of the same
+file but from a different branch, e.g. main, use:
+
+    git restore --source=main testfile.txt
+
+Or with the older git checkout syntax:
+
+    git checkout main -- testfile.txt
+
+Both commands will overwrite your current file with the version from the other
+branch.
+
+## Damn, I committed a secret
 
 **Symptom**
 
@@ -70,7 +84,7 @@ In addition, go and study the page ["Removig sensitive data from a
 repository"](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
 in the GitHub Documenation.
 
-## Damn, I branched off wrong parent branch!
+## Damn, I branched off wrong parent branch
 
 **Symptom**
 
