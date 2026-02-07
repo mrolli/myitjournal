@@ -4,9 +4,8 @@ dependencies:
   - python=3
   - pip
   - pip:
-      - mkdocs-material
+      - zensical
       - mkdocs-git-revision-date-localized-plugin
-      - mkdocs-git-authors-plugin
       - mkdocs-glightbox
       - argcomplete
       - pre-commit
