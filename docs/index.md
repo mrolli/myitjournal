@@ -1,7 +1,7 @@
 # Home
 
 On these pages you will find instructions, exercises, cheat sheets, references,
-and tutorials. Originally the material was meant to teach our apprentices in
+and tutorials. Originally the material was meant to teach our apprentices in-
 house a starting point on their quest to obtain new skills and learn new stuff.
 
 Courses are more work instructions for learners of new stuff to guide them to a
