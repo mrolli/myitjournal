@@ -12,7 +12,7 @@ to lua based configuration. These are three articles that help on the journey:
 
 - [Everything you need to know to configure Neovim using lua](https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/)
 - [From init.vim to init.lua](https://teukka.tech/luanvim.html)
-- [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide)
+- [Built-in Lua-guide](https://neovim.io/doc/user/lua-guide/#lua-guide)
 
 ## This & That
 

@@ -19,10 +19,11 @@ extra_css = ["stylesheets/extra.css"]
 nav = [
   { "Home" = "index.md" },
   { "Courses" = [
-    { "Tools" = "courses/tools.md" },
+    "courses/tools.md",
     { "My IT Journal" = [
-      { "Work instructions" = "courses/myitjournal.md" },
-      { "WB_KW32" = "courses/wb_demo.md" },
+      { "Overview" = "courses/myitjournal/index.md" },
+      { "Work instructions" = "courses/myitjournal/workinstructions.md" },
+      { "WB_KW32" = "courses/myitjournal/wb_demo.md" },
     ] },
     { "Webapp Stack" = "courses/webappstack.md" },
     { "The World in SQL" = "courses/world_in_sql.md" },
@@ -34,7 +35,6 @@ nav = [
     { "macOS FAQs" = "guides/macos_faq.md" },
     { "Mnemonics" = "guides/mnemonics.md" },
     { "Miniconda" = "guides/miniconda.md" },
-    { "MkDocs" = "guides/mkdocs.md" },
     { "Neovim" = "guides/neovim.md" },
     { "Shell Scripting" = [
       { "Bash Heredoc" = "guides/scripting/bash_heredoc.md" },
@@ -43,6 +43,7 @@ nav = [
     { "tmux" = "guides/tmux.md" },
     { "Vagrant" = "guides/vagrant.md" },
     { "Vim" = "guides/vim.md" },
+    "guides/zensical.md",
     { "Zsh" = "guides/zsh.md" },
     { "Miscellaneous" = "guides/misc.md" },
   ] },

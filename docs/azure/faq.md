@@ -1,10 +1,10 @@
 # FAQ
 
-### Sub-resource of Services
+## Sub-resource of Services
 
 The Sub-resources are case-sentitive and are used when creating private
-endpoints. The AVM modules are settting this field automatically, i.e. ["vault"]
-for a key vault or ["blob"] for a Blob Storage. For terraform, this field is
+endpoints. The AVM modules are settting this field automatically, i.e. \["vault"\]
+for a key vault or \["blob"\] for a Blob Storage. For terraform, this field is
 optional for `azurerm_private_endpoint`.
 
 ```hcl

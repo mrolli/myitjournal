@@ -1,7 +1,12 @@
+---
+
+icon: lucide/rocket
+---
+
 # Home
 
 On these pages you will find instructions, exercises, cheat sheets, references,
-and tutorials. Originally the material was meant to teach our apprentices in-
+and tutorials. Originally, the material was meant to teach our apprentices in-
 house a starting point on their quest to obtain new skills and learn new stuff.
 
 Courses are more work instructions for learners of new stuff to guide them to a
@@ -9,32 +14,126 @@ goal. These link over to the guides - call them memorandums on my journey on a
 lot of webpages where I gather snips and lines that are worth to be kept and
 remembered - that are organized by topic.
 
-Meanwhile this technical documentation might morph towards my personal
+Meanwhile, this technical documentation might morph towards my personal
 omnium-gatherum while still trying to be useful for our young learners.
 Therefore it is and will always be in a flux.
 
 !!! success "Have Fun!"
     Now start with whatever interests you the most.
 
-Below follows the default index.md of a MkDocs installation as a quickref.
+## Get started
+
+For full documentation visit [zensical.org](https://zensical.org/docs/).
 
 ## Commands
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+- [`zensical new`][new] - Create a new project
+- [`zensical serve`][serve] - Start local web server
+- [`zensical build`][build] - Build your site
 
-## Project layout
+  [new]: https://zensical.org/docs/usage/new/
+  [serve]: https://zensical.org/docs/usage/preview/
+  [build]: https://zensical.org/docs/usage/build/
 
-```bash
-mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+## Examples
+
+### Admonitions
+
+> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
+
+!!! note
+
+    This is a **note** admonition. Use it to provide helpful information.
+
+!!! warning
+
+    This is a **warning** admonition. Be careful!
+
+### Details
+
+> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
+
+??? info "Click to expand for more info"
+
+    This content is hidden until you click to expand it.
+    Great for FAQs or long explanations.
+
+## Code Blocks
+
+> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
+
+``` python hl_lines="2" title="Code blocks"
+def greet(name):
+    print(f"Hello, {name}!") # (1)!
+
+greet("Python")
 ```
 
-## Emojis, Icons and Keys
+1. > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
+
+    Code annotations allow to attach notes to lines of code.
+
+Code can also be highlighted inline: `#!python print("Hello, Python!")`.
+
+## Content tabs
+
+> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
+
+=== "Python"
+
+    ``` python
+    print("Hello from Python!")
+    ```
+
+=== "Rust"
+
+    ``` rs
+    println!("Hello from Rust!");
+    ```
+
+## Diagrams
+
+> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+```
+
+## Footnotes
+
+> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
+
+Here's a sentence with a footnote.[^1]
+
+Hover it, to see a tooltip.
+
+[^1]: This is the footnote.
+
+## Formatting
+
+> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
+
+- ==This was marked (highlight)==
+- ^^This was inserted (underline)^^
+- ~~This was deleted (strikethrough)~~
+- H~2~O
+- A^T^A
+- ++ctrl+alt+del++
+
+## Icons, Emojis
+
+> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
+
+- :sparkles: `:sparkles:`
+- :rocket: `:rocket:`
+- :tada: `:tada:`
+- :memo: `:memo:`
+- :eyes: `:eyes:`
 
 - :smile:   `:smile:`
 - :material-account-circle:   `:material-account-circle:`
@@ -49,25 +148,57 @@ docs/
 - ++space+f++   `++space+f++`
 - ++command+f1++  `++command+f1++`
 
-For more icons and emojis use the [emojis/icons search
-bar](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) in
-the mkdocs-material documentation. The keyboard keys rendering is done using
-the [`pymxdown.keys` extension](https://facelessuser.github.io/pymdown-extensions/extensions/keys/).
+## Maths
 
-For the full documentation visit [material-mkdocs](https://squidfunk.github.io/mkdocs-material/)
-and [mkdocs.org](https://www.mkdocs.org).
+> Go to [documentation](https://zensical.org/docs/authoring/math/)
 
-## Mermaid supported
+$$
+\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
+$$
 
-``` mermaid
-sequenceDiagram
-  title: Cool Seq Diagram
-  Alice->>John: Hello John, how are you?
-  loop Healthcheck
-      John->>John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts!
-  John-->>Alice: Great!
-  John->>Bob: How about you?
-  Bob-->>John: Jolly good!
-```
+!!! warning "Needs configuration"
+    Note that MathJax is included via a `script` tag on this page and is not
+    configured in the generated default configuration to avoid including it
+    in a pages that do not need it. See the documentation for details on how
+    to configure it on all your pages if they are more Maths-heavy than these
+    simple starter pages.
+
+<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [["\\(", "\\)"]],
+      displayMath: [["\\[", "\\]"]],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      ignoreHtmlClass: ".*|",
+      processHtmlClass: "arithmatex"
+    }
+  };
+
+  document$.subscribe(() => {
+    MathJax.startup.output.clearCache()
+    MathJax.typesetClear()
+    MathJax.texReset()
+    MathJax.typesetPromise()
+  })
+</script>
+
+## Task Lists
+
+> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
+
+- [x] Install Zensical
+- [x] Configure `zensical.toml`
+- [x] Write amazing documentation
+- [ ] Deploy anywhere
+
+## Tooltips
+
+> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
+
+[Hover me][example]
+
+  [example]: https://example.com "I'm a tooltip!"

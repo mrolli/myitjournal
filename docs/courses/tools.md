@@ -9,7 +9,7 @@ programm installed. In addition, speaking of macOS, it's not possible to
 uninstall a piece of software automatically. This is a manual process done in
 Finder.  
 Hence we are in need of a good package manager that works like
-apt-get/yum found in Linux distructions and that allows us to script things and
+apt-get/yum found in Linux distribution and that allows us to script things and
 install stuff automatically. The most used package manager on macOS these days
 is Homebrew. Homebrew is even available on Linux and brings some benefits over
 the distribution repositories as it knows a lot more modern tools.
@@ -27,7 +27,7 @@ Homebrew and its documentation can be found at [https://brew.sh/](https://brew.s
     * Verify its in a working state (see commands available)
     * Install a first CLI tool: wget
 
-## Vim
+## Vim/Neovim
 
 Next on the plan is [Vim](https://www.vim.org/) the ubiquitous, powerful,
 command line-based text editor. Sure the are the GUI-based editors that you are
@@ -39,13 +39,15 @@ install "your" text editor first. It's just there there
 <https://www.vim.org/>
 
 To install Vim, we now have Homebrew. There is a more modern drop-in replacement
-called [Neovim] that has Lua support built-in. It works exactly like Vim but has
-some other advantages beyond this course, but if you fall in love with Vim, you
-should consider switching. Or you already install it now.
+called [Neovim]. It works exactly like Vim but has some other advantages beyond
+this course, but if you fall in love with Vim and you want to use it as your
+main editor on your local desktop, you should consider switching - or
+you already install it now.
 
 !!! abstract "Install Vim or Neovim"
     Now either install `Vim` or `Neovim`. You know how. ;
 
+[Neovim]: https://neovim.io
 [Visual Studio Code]: https://code.visualstudio.com/
 [Sublime Text]: https://www.sublimetext.com/
 [Atom]: https://atom.io/

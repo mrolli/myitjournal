@@ -35,10 +35,10 @@ based on specifications found in a YAML file.
     # Create conda environment and activate it
     conda create --name myenv
     conda activate myenv
-    # Install latest Python 3.9.x
-    conda install python=3.9
+    # Install latest Python 3.14
+    conda install python=3.14
     # Install some package and its depepdencies
-    pip install mkdocs-material
+    pip install zensical
     ```
 
 === "from file"
@@ -48,9 +48,9 @@ based on specifications found in a YAML file.
     cat <<EOD >~/environment.yml
     name: myenv
     dependencies:
-      - python=3.9
+      - python=3.14
       - pip:
-          - mkdocs-material
+          - zensical
     EOD
     # the -f option can even be ommitted if the environment file is named
     # environment.yaml and is found within current workig directory
