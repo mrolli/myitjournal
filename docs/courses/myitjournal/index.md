@@ -39,29 +39,29 @@ Now let us first define the requirements and the goals of our solution:
 After this course, the following learning outcomes shall be achieved:
 
 - Git and GitHub
-  - You know how to create a new Git repository and do commits.
-  - You know how to host your repo at GitHub and how to push changes
-  - You can explain what GitHub pages are.
-  - You can publish static pages to GitHub pages using an automation workflow.
-  - You have basic knowledge about GitHub Actions and can describe what they are
-    and why they are helpful.
+    - You know how to create a new Git repository and do commits.
+    - You know how to host your repo at GitHub and how to push changes
+    - You can explain what GitHub pages are.
+    - You can publish static pages to GitHub pages using an automation workflow.
+    - You have basic knowledge about GitHub Actions and can describe what they are
+      and why they are helpful.
 - Conda
-  - You can describe what Conda is and what problem it solves.
-  - You can setup a Python project environment using Miniconda
-- Markdown based code generators
-  - You can describe what a static code generator does.
-  - You can enumerate a couple of static code generator and know which language
-    they are written in.
-  - You know some background about Zensical (Who is developing it? Where are its
-    roots? Why does it exist?)
-  - You can start a new Zensical project.
-  - You can automatically publish your journal to GitHub on every change you make.
+    - You can describe what Conda is and what problem it solves.
+    - You can setup a Python project environment using Miniconda
+- Markdown Based Code Generators
+    - You can describe what a static code generator does.
+    - You can enumerate a couple of static code generator and know which language
+      they are written in.
+    - You know some background about Zensical (Who is developing it? Where are its
+      roots? Why does it exist?)
+    - You can start a new Zensical project.
+    - You can automatically publish your journal to GitHub on every change you make.
 - Markdown
-  - You can describe what Markdown is and why/how it is a useful file type.
-  - You get used to write Markdown files for documentation purposes.
-  - You know basic text styling like headers, bold, italics, ...
-  - You know basic elements like admonitions, code blocks, content tabs, ...
-  - You know the front matter and what it can used for.
+    - You can describe what Markdown is and why/how it is a useful file type.
+    - You get used to write Markdown files for documentation purposes.
+    - You know basic text styling like headers, bold, italics, ...
+    - You know basic elements like admonitions, code blocks, content tabs, ...
+    - You know the front matter and what it can used for.
 
 ## Journals of Previous Apprentices
 
