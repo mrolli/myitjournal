@@ -1,3 +1,8 @@
+---
+title: Overview
+description: Project intro with requirements and learning objectives
+---
+
 # My IT Journal
 
 ## Project Overview
@@ -51,6 +56,12 @@ After this course, the following learning outcomes shall be achieved:
     roots? Why does it exist?)
   - You can start a new Zensical project.
   - You can automatically publish your journal to GitHub on every change you make.
+- Markdown
+  - You can describe what Markdown is and why/how it is a useful file type.
+  - You get used to write Markdown files for documentation purposes.
+  - You know basic text styling like headers, bold, italics, ...
+  - You know basic elements like admonitions, code blocks, content tabs, ...
+  - You know the front matter and what it can used for.
 
 ## Journals of Previous Apprentices
 

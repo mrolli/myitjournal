@@ -21,7 +21,7 @@ nav = [
   { "Courses" = [
     "courses/tools.md",
     { "My IT Journal" = [
-      { "Overview" = "courses/myitjournal/index.md" },
+      "courses/myitjournal/index.md",
       { "Work instructions" = "courses/myitjournal/workinstructions.md" },
       { "WB_KW32" = "courses/myitjournal/wb_demo.md" },
     ] },
