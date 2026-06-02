@@ -15,6 +15,13 @@ an introduction to the Azure Portal.
 - Take the [quick tour of Azure](https://azure.microsoft.com/en-us/get-started/)
 - Then [get started in the Azure Portal](https://azure.microsoft.com/en-us/get-started/on-demand/)
 
+There is [small documentation](https://knowit.unibe.ch/de/docs/cloud/azure) that
+the IT Office at the University of Bern is maintaining that you can visit. The
+introduction page and the chapter [Azure
+Services](https://knowit.unibe.ch/de/docs/cloud/azure) might be of interest. The
+latter showcases some important Azure Services and provides a lot of Links to
+documentation, learning material and examples.
+
 ## Work Instructions
 
 ### Portal Settings
