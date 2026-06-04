@@ -26,7 +26,9 @@ nav = [
       { "WB_KW32" = "courses/myitjournal/wb_demo.md" },
     ] },
     { "Azure" = [
-      "courses/azure/index.md"
+      "courses/azure/index.md",
+      "courses/azure/staticwebapp.md",
+      "courses/azure/iac.md"
     ]},
     { "Webapp Stack" = "courses/webappstack.md" },
     { "The World in SQL" = "courses/world_in_sql.md" },
