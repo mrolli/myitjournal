@@ -28,7 +28,8 @@ nav = [
     { "Azure" = [
       "courses/azure/index.md",
       "courses/azure/staticwebapp.md",
-      "courses/azure/iac.md"
+      "courses/azure/iac.md",
+      "courses/azure/music_dashboard.md"
     ]},
     { "Webapp Stack" = "courses/webappstack.md" },
     { "The World in SQL" = "courses/world_in_sql.md" },
