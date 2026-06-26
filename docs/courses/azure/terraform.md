@@ -13,8 +13,14 @@ into topic and additionally also a follow-up quickstart course.
 
 - [Fundamentals of Terraform on Azure][course-tf-intro]
 - [Terraform on Azure Fundamentals Lab][tf-on-azure-lab]
-- [Azure Verified Modules][avm]
+- [Azure Verified Modules][avm]: Overview with introduction video
+- [AVM Quickstart][avm-quickstart]: Quickstart Lab setting up a Key Vault with
+  Terraform (or Bicep)
+- [AVM Solution Development][avm-solution]: Deploying a hole solution with Terraform
+  (or Bicep)
 
 [course-tf-intro]: https://learn.microsoft.com/en-us/training/paths/terraform-fundamentals/
 [tf-on-azure-lab]: https://azure-samples.github.io/terraform-fundamentals-labs/
 [avm]: https://azure.github.io/Azure-Verified-Modules/
+[avm-quickstart]: https://azure.github.io/Azure-Verified-Modules/usage/quickstart/terraform/
+[avm-solution]: https://azure.github.io/Azure-Verified-Modules/usage/solution-development/terraform/
