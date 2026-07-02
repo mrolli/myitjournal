@@ -29,12 +29,12 @@ three is often more than one solution.
 ## Preparations
 
 Fetch the [world
-database](https://dev.mysql.com/doc/world-setup/en/world-setup-installation.html)
+database](https://dev.mysql.com/doc/index-other.html)
 to the database server and import the schema and data. Just follow the guide
 provided by the fore-mentioned page. If you do not have an SQL server yet, you
 might want to follow the [webappstack course](webappstack.md) or fetch a
-pre-built VM from the internet featuring MariaDB or any other relational
-database that speaks SQL.
+pre-built VM from the internet featuring MariaDB or setup a fitting database
+server in the cloud that can import this dump of a relational database.
 
 ## Journey Around the World
 
