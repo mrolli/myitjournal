@@ -18,7 +18,9 @@ highlighted here.
 !!! success Learning Objectives
 
     - You can describe the concept of IaC and HCL.
-    - You can describe the cycle `terrform init -> terraform plan -> terraform apply`
+    - You can describe the difference between imperative and declarative code.
+    - You can describe the benefits of using IaC.
+    - You can describe the cycle `terraform init -> terraform plan -> terraform apply`
     - You can describe the concept of Terraform state.
     - You can describe when and why remote state is crucial.
 
