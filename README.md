@@ -1,6 +1,7 @@
 # My Bootcamp
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![prek](https://raw.githubusercontent.com/j178/prek/master/docs/assets/badge.svg)](https://github.com/j178/prek)
+[![devenv](https://img.shields.io/badge/devenv-enabled-orange)](https://devenv.sh)
 
 This repo holds my suggestions for some aspects of the HPC apprentice bootcamp.
 
