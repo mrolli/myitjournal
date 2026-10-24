@@ -1,6 +1,12 @@
 # Nix
 
+[Official Documentation of the Nix Package Manager](https://nix.dev)
+[den - Context-aware Aspect-oriented Nix](https://den.denful.dev)
 [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/introduction/)
+[devenv.sh](https://devenv.sh/getting-started/)
+[mynixos nix-darwin Options](https://mynixos.com/nix-darwin/options)
+[Nix Package Search](https://search.nixos.org/)
+[Nix Function Search](https://noogle.dev/)
 
 ## Determinate Nix Installer
 
