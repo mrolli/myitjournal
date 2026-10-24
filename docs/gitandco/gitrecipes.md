@@ -139,12 +139,13 @@ rebase some branch from one branch onto another - looks like this:
 The destination branch comes first follow by the old branch. The branch that is
 moved is the currently checked out!
 
-Second, as you see one schema above, after using `git rebase --onto` we don’t have
-exactly the same commit like before. Code is the same, but the SHA number (you know
-the commit identifier, for example 2d4698b) for each commit is different. Everything
-will be fine, when you work alone on the branch where you want to do the trick.
-In case other people also work on this branch this command can provide problems as
-always when you rewrite history and change commit hashes.
+Second, as you see one schema above, after using `git rebase --onto` we don’t
+have exactly the same commit like before. Code is the same, but the SHA number
+(you know the commit identifier, for example 2d4698b) for each commit is
+different. Everything will be fine, when you work alone on the branch where you
+want to do the trick. In case other people also work on this branch this command
+can provide problems as always when you rewrite history and change commit
+hashes.
 
 More on `git rebase --onto` can be found in [Git rebase --onto an overview](https://womanonrails.com/git-rebase-onto)
 
@@ -245,3 +246,30 @@ is imported.
     ```
 
     Now is also a good moment to clenaup the history of the branch you want to import.
+
+## Cherry-pick a Commit From Another Repository
+
+**Symptom**
+
+I have a marvelous new commit in one of my repositories that improves the github
+workflows and other files. Now, I use this workflow in many other repos too. How
+tedious would it be to change all the files in every other repos... is there a
+shortcut?
+
+**Discussion and Solution**
+
+Yes, there is. It's possible to "cherry-pick" from one repo to another. Ok, it's
+not really cherry-picking as cherry-picking would for you to add the source repo
+as a remote, then... you know. But there's a shorter way:
+
+```bash
+git --git-dir=../<source_repo>/.git \
+format-patch -k -1 --stdout <commit hash> | \
+git am -3 -k
+```
+
+This command create a patch of the given commit and applies it in the current
+repositry if possible. If all goes well, the changes are commit with the exact
+same commit message of the source commit - done. If it fails you can inspect and
+fix and either `--continue` or `--abort` the `git am` command - much like when
+rebasing.
